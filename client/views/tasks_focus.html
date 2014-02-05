@@ -1,5 +1,16 @@
 <template name="focusTasks">
 	{{#each tasks}}
-		{{> taskTemplate}}
+		{{#if priority}}
+			{{> taskTemplate}}
+		{{/if}}
 	{{/each}}
+
+	<div id="collapsable">
+	{{#each tasks}}
+		{{#if priority}}
+		{{else}}
+			{{> taskTemplate}}
+		{{/if}}
+	{{/each}}
+	</div>
 </template>

@@ -1,5 +1,5 @@
 <template name="taskTemplate">
-<div>
+<div class="task priority-{{priority}}">
 	<input type="checkbox" {{#if completed}}checked{{/if}} /><span>{{title}}</span>
 </div>
 </template>
