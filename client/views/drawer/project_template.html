@@ -1,0 +1,21 @@
+<template name="projectTemplate">
+	<div class="project">
+		<h2>{{name}}</h2>
+		
+		<div class="taskList">
+			<div class="task">
+				{{#if creatingNewTask}}
+					<form>
+						<input type="text" name="title" />
+						<input type="submit" value="Create" />
+					</form>
+				{{else}}
+					<div class="newTaskTrigger clickable"><p>+New Task...</p></div>
+				{{/if}}
+			</div>
+			{{#each tasks}}
+				{{> projectTask}}
+			{{/each}}
+		</div>
+	</div>
+</template>

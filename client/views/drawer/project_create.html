@@ -1,0 +1,16 @@
+<template name="projectCreate">
+	<div class="project">
+		{{#if createNewProject}}
+			<h2>Creating new project</h2>
+			<form>
+				<label for="title">Project name:</label>
+				<input type="text" name="projectName" />
+				<input type="submit" value="Create" />
+			</form>
+		{{else}}
+			<div class="newProjectTrigger">
+				<h2>+ New project...</h2>
+			</div>
+		{{/if}}
+	</div>
+</template>
