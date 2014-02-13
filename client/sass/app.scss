@@ -1,7 +1,16 @@
 @import "_base";
+@import "partials/_sindre.scss";
 
 // Vertical rythm plugin: http://atendesigngroup.com/blog/vertical-rhythm-compass
 @include establish-baseline;
+
+
+// Projects drawer variables
+$drawer-text-color: #fff;
+$drawer-background-color: blue;
+
+
+
 
 @import "modules/_header.scss";
 @import "modules/_tasks.scss";

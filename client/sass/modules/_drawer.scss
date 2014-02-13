@@ -1,0 +1,53 @@
+#projectsDrawer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	color: $drawer-text-color;
+	
+	.tag {
+		display: inline-block;
+		background: $drawer-background-color;
+		height: 40px;
+		line-height: 40px;
+		width: 200px;
+	}
+
+	input {
+		background: lighten( $drawer-background-color, 10%);
+	}
+
+	.drawer {
+		width: 100%;
+		background: $drawer-background-color;
+		overflow-y: hidden;
+		overflow-x: scroll;
+		@include transition(all 0.3s ease-in-out);
+		&.open {
+			height: 400px;
+		}
+		&.closed {
+			height: 0;
+
+		}
+	}
+	.project {
+		width: 350px;
+		margin-left: 20px;
+		display: inline-block;
+		height: 100%;
+		vertical-align: top;
+		position: relative;
+	}
+	.taskList {
+		/*min-height: 200px;*/
+		position: absolute;
+		top: 48px + 2*24px;
+		bottom: 0;
+		width: 100%;
+		overflow-y: scroll;
+	}
+	.task {
+		border-bottom: 1px solid $drawer-text-color;
+	}
+}

@@ -546,6 +546,17 @@ td,
 th {
   padding: 0; }
 
+/* line 1, ../sass/partials/_sindre.scss */
+.clickable {
+  cursor: pointer; }
+
+/* line 4, ../sass/partials/_sindre.scss */
+.exclBox {
+  display: block;
+  width: 100%;
+  text-align: center;
+  position: relative; }
+
 /* line 61, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 * html {
   font-size: 100%; }
@@ -582,3 +593,56 @@ header {
 .priority-secondary {
   font-size: 1em;
   line-height: 1.5em; }
+
+/* line 1, ../sass/modules/_drawer.scss */
+#projectsDrawer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white; }
+  /* line 8, ../sass/modules/_drawer.scss */
+  #projectsDrawer .tag {
+    display: inline-block;
+    background: blue;
+    height: 40px;
+    line-height: 40px;
+    width: 200px; }
+  /* line 16, ../sass/modules/_drawer.scss */
+  #projectsDrawer input {
+    background: #3333ff; }
+  /* line 20, ../sass/modules/_drawer.scss */
+  #projectsDrawer .drawer {
+    width: 100%;
+    background: blue;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    /* line 26, ../sass/modules/_drawer.scss */
+    #projectsDrawer .drawer.open {
+      height: 400px; }
+    /* line 29, ../sass/modules/_drawer.scss */
+    #projectsDrawer .drawer.closed {
+      height: 0; }
+  /* line 34, ../sass/modules/_drawer.scss */
+  #projectsDrawer .project {
+    width: 350px;
+    margin-left: 20px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+    position: relative; }
+  /* line 42, ../sass/modules/_drawer.scss */
+  #projectsDrawer .taskList {
+    /*min-height: 200px;*/
+    position: absolute;
+    top: 96px;
+    bottom: 0;
+    width: 100%;
+    overflow-y: scroll; }
+  /* line 50, ../sass/modules/_drawer.scss */
+  #projectsDrawer .task {
+    border-bottom: 1px solid white; }
