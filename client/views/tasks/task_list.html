@@ -1,0 +1,31 @@
+<template name="taskList">
+	<div class="task priority-1">
+		{{#if p1}}
+			{{> taskTemplate p1}}
+		{{else}}
+			{{> emptyTask }}
+		{{/if}}
+	</div>
+
+	<div class="task priority-2">
+		{{#if p2}}
+			{{> taskTemplate p2}}
+		{{else}}
+			{{> emptyTask }}
+		{{/if}}
+	</div>
+
+	<div class="task priority-3">
+		{{#if p3}}
+			{{> taskTemplate p3}}
+		{{else}}
+			{{> emptyTask }}
+		{{/if}}
+	</div>
+	Secondary tasks:
+	{{#each secondary}}
+		<div class="task priority-secondary">
+			{{> taskTemplate}}
+		</div>
+	{{/each}}
+</template>

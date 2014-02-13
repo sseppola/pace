@@ -1,0 +1,17 @@
+.task {
+	input {
+		margin-right: 10px;
+	}
+}
+.priority-1 {
+	@include adjust-font-size-to(26px);
+}
+.priority-2 {
+	@include adjust-font-size-to(22px);
+}
+.priority-3 {
+	@include adjust-font-size-to(18px);
+}
+.priority-secondary {
+	@include adjust-font-size-to(16px);
+}
