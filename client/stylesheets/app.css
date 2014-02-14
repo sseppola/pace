@@ -566,9 +566,23 @@ html {
   font-size: 16px;
   line-height: 1.5em; }
 
-/* line 1, ../sass/modules/_header.scss */
+/* line 3, ../sass/modules/_header.scss */
 header {
+  height: 100px;
   border-bottom: 1px solid black; }
+  /* line 6, ../sass/modules/_header.scss */
+  header .wrapper {
+    position: relative; }
+  /* line 9, ../sass/modules/_header.scss */
+  header .logo {
+    position: absolute;
+    left: 0;
+    line-height: 100px; }
+  /* line 14, ../sass/modules/_header.scss */
+  header .loginBtns {
+    position: absolute;
+    right: 150px;
+    top: 82px; }
 
 /* line 2, ../sass/modules/_tasks.scss */
 .task input {
