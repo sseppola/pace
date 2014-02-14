@@ -12,7 +12,7 @@ if (Tasks.find().count() === 0) {
 
 	var snId = Accounts.createUser({
 		username: 'Sam',
-		email: 'sn@loke.com.au',
+		email: 'samjoonas@gmail.com',
 		password: 'password',
 		profile: {
 			forename: 'Sam',
@@ -35,6 +35,7 @@ if (Tasks.find().count() === 0) {
 		priority: 1,
 		completed: true,
 		accepted_date: PaceHelper.todayString(),
+		accepted_by: ssId,
 		projectId: paceId,
 		owner: ssId
 	});
@@ -44,6 +45,7 @@ if (Tasks.find().count() === 0) {
 		priority: 2,
 		completed: true,
 		accepted_date: PaceHelper.todayString(),
+		accepted_by: ssId,
 		projectId: paceId,
 		owner: ssId
 	});
@@ -53,6 +55,7 @@ if (Tasks.find().count() === 0) {
 		priority: 3,
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
+		accepted_by: ssId,
 		projectId: paceId,
 		owner: ssId
 	});
@@ -62,6 +65,7 @@ if (Tasks.find().count() === 0) {
 		priority: null,
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
+		accepted_by: ssId,
 		projectId: paceId,
 		owner: ssId
 	});
@@ -71,6 +75,7 @@ if (Tasks.find().count() === 0) {
 		priority: null,
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
+		accepted_by: ssId,
 		projectId: paceId,
 		owner: ssId
 	});
@@ -80,6 +85,7 @@ if (Tasks.find().count() === 0) {
 		priority: null,
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
+		accepted_by: ssId,
 		projectId: paceId,
 		owner: ssId
 	})
@@ -89,6 +95,7 @@ if (Tasks.find().count() === 0) {
 		priority: null,
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
+		accepted_by: ssId,
 		projectId: paceId,
 		owner: ssId
 	});
@@ -98,6 +105,7 @@ if (Tasks.find().count() === 0) {
 		priority: null,
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
+		accepted_by: ssId,
 		projectId: paceId,
 		owner: ssId
 	});
