@@ -1,0 +1,19 @@
+<template name="newProjectTask">
+	<div class="task">
+		{{#if creatingNewTask}}
+			<form>
+				<div>
+					<input type="text" name="title" placeholder="Task name" />
+				</div>
+				<div>
+					<label for="estimate">Time estimate:</label>
+					<div class="slidah"></div>
+					<span>{{ timeEstimate }}</span>
+				</div>
+				<input type="submit" value="Create" />
+			</form>
+		{{else}}
+			<div class="newTaskTrigger clickable"><p>+New Task...</p></div>
+		{{/if}}
+	</div>
+</template>

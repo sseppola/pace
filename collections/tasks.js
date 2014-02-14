@@ -10,11 +10,13 @@ Meteor.methods({
 
 		var newTask = {
 			title: taskAttributes.title,
+			// owner: Meteor.userId(), // check if the call is the correct method
 			priority: null,
 			completed: false,
 			accepted_date: null,
 			created_date: new Date().getTime(),
-			projectId: taskAttributes.projectId
+			projectId: taskAttributes.projectId,
+			timeEstimate: taskAttributes.timeEstimate
 		}
 
 		var id = Tasks.insert(newTask);

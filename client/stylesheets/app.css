@@ -660,3 +660,32 @@ header {
   /* line 50, ../sass/modules/_drawer.scss */
   #projectsDrawer .task {
     border-bottom: 1px solid white; }
+
+/* line 20, ../sass/app.scss */
+.ui-slider-horizontal {
+  height: 0.4em;
+  width: 200px; }
+
+/* line 24, ../sass/app.scss */
+.ui-slider {
+  position: relative;
+  text-align: left; }
+
+/* line 29, ../sass/app.scss */
+.ui-widget-content {
+  border: 1px solid red;
+  background: green;
+  color: blue; }
+
+/* line 34, ../sass/app.scss */
+.ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 1.2em;
+  height: 1.2em;
+  top: -0.3em;
+  margin-left: -0.6em;
+  background: black; }
+  /* line 43, ../sass/app.scss */
+  .ui-slider-handle:focus {
+    outline: none; }

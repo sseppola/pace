@@ -15,3 +15,32 @@ $drawer-background-color: blue;
 @import "modules/_header.scss";
 @import "modules/_tasks.scss";
 @import "modules/_drawer.scss";
+
+
+.ui-slider-horizontal {
+	height: 0.4em;
+	width: 200px;
+}
+.ui-slider {
+	position: relative;
+	text-align: left;
+}
+
+.ui-widget-content {
+	border: 1px solid red;
+	background: green;
+	color: blue;
+}
+.ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 1.2em;
+	height: 1.2em;
+	top: -0.3em;
+	margin-left: -0.6em;
+	background: black;
+
+	&:focus {
+		outline: none;
+	}
+}
