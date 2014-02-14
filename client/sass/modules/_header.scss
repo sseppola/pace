@@ -5,6 +5,7 @@ header {
 	border-bottom: 1px solid black;
 	.wrapper {
 		position: relative;
+		text-align: center;
 	}
 	.logo {
 		position: absolute;
@@ -16,4 +17,9 @@ header {
 		right: 150px;
 		top: 82px;
 	}
+}
+
+#dailyInfo {
+	display: inline-block;
+	height: $header-height;
 }

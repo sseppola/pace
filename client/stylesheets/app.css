@@ -572,17 +572,23 @@ header {
   border-bottom: 1px solid black; }
   /* line 6, ../sass/modules/_header.scss */
   header .wrapper {
-    position: relative; }
-  /* line 9, ../sass/modules/_header.scss */
+    position: relative;
+    text-align: center; }
+  /* line 10, ../sass/modules/_header.scss */
   header .logo {
     position: absolute;
     left: 0;
     line-height: 100px; }
-  /* line 14, ../sass/modules/_header.scss */
+  /* line 15, ../sass/modules/_header.scss */
   header .loginBtns {
     position: absolute;
     right: 150px;
     top: 82px; }
+
+/* line 22, ../sass/modules/_header.scss */
+#dailyInfo {
+  display: inline-block;
+  height: 100px; }
 
 /* line 2, ../sass/modules/_tasks.scss */
 .task input {
