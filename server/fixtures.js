@@ -1,8 +1,33 @@
 if (Tasks.find().count() === 0) {
 
+	var ssId = Accounts.createUser({
+		username: 'Sindre',
+		email: 'sseppola@me.com',
+		password: 'password',
+		profile: {
+			forename: 'Sindre',
+			surname: 'Seppola'
+		}
+	});
+
+	var snId = Accounts.createUser({
+		username: 'Sam',
+		email: 'sn@loke.com.au',
+		password: 'password',
+		profile: {
+			forename: 'Sam',
+			surname: 'Nissinen'
+		}
+	});
+
 	var paceId = Projects.insert({
 		name: 'Pace',
-		date_created: new Date().getTime()
+		date_created: new Date().getTime(),
+		owner: ssId,
+		members: [
+			ssId,
+			snId
+		]
 	});
 
 	Tasks.insert({
@@ -10,7 +35,8 @@ if (Tasks.find().count() === 0) {
 		priority: 1,
 		completed: true,
 		accepted_date: PaceHelper.todayString(),
-		projectId: paceId
+		projectId: paceId,
+		owner: ssId
 	});
 
 	Tasks.insert({
@@ -18,7 +44,8 @@ if (Tasks.find().count() === 0) {
 		priority: 2,
 		completed: true,
 		accepted_date: PaceHelper.todayString(),
-		projectId: paceId
+		projectId: paceId,
+		owner: ssId
 	});
 
 	Tasks.insert({
@@ -26,7 +53,8 @@ if (Tasks.find().count() === 0) {
 		priority: 3,
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
-		projectId: paceId
+		projectId: paceId,
+		owner: ssId
 	});
 
 	Tasks.insert({
@@ -34,7 +62,8 @@ if (Tasks.find().count() === 0) {
 		priority: null,
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
-		projectId: paceId
+		projectId: paceId,
+		owner: ssId
 	});
 
 	Tasks.insert({
@@ -42,7 +71,8 @@ if (Tasks.find().count() === 0) {
 		priority: null,
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
-		projectId: paceId
+		projectId: paceId,
+		owner: ssId
 	});
 
 	Tasks.insert({
@@ -50,7 +80,8 @@ if (Tasks.find().count() === 0) {
 		priority: null,
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
-		projectId: paceId
+		projectId: paceId,
+		owner: ssId
 	})
 
 	Tasks.insert({
@@ -58,7 +89,8 @@ if (Tasks.find().count() === 0) {
 		priority: null,
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
-		projectId: paceId
+		projectId: paceId,
+		owner: ssId
 	});
 
 	Tasks.insert({
@@ -66,14 +98,7 @@ if (Tasks.find().count() === 0) {
 		priority: null,
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
-		projectId: paceId
+		projectId: paceId,
+		owner: ssId
 	});
 }
-
-// if (User.find().count() === 0) {
-// 	var today = new Date();
-// 	var dd = today.getDate(),
-// 		mm = today.getMonth() + 1,
-// 		yyyy = today.getFullYear();
-// 	var dateString = dd + '.' + mm + '.' + yyyy;
-// }
