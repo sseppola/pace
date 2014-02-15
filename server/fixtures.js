@@ -36,6 +36,7 @@ if (Tasks.find().count() === 0) {
 		completed: true,
 		accepted_date: PaceHelper.todayString(),
 		accepted_by: ssId,
+		created_date: new Date().getTime(),
 		projectId: paceId,
 		owner: ssId,
 		timeEstimate: 30
@@ -47,6 +48,7 @@ if (Tasks.find().count() === 0) {
 		completed: true,
 		accepted_date: PaceHelper.todayString(),
 		accepted_by: ssId,
+		created_date: new Date().getTime(),
 		projectId: paceId,
 		owner: ssId,
 		timeEstimate: 30
@@ -58,6 +60,7 @@ if (Tasks.find().count() === 0) {
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
 		accepted_by: ssId,
+		created_date: new Date().getTime(),
 		projectId: paceId,
 		owner: ssId,
 		timeEstimate: 30
@@ -69,6 +72,7 @@ if (Tasks.find().count() === 0) {
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
 		accepted_by: ssId,
+		created_date: new Date().getTime(),
 		projectId: paceId,
 		owner: ssId,
 		timeEstimate: 30
@@ -80,6 +84,7 @@ if (Tasks.find().count() === 0) {
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
 		accepted_by: ssId,
+		created_date: new Date().getTime(),
 		projectId: paceId,
 		owner: ssId,
 		timeEstimate: 30
@@ -91,6 +96,7 @@ if (Tasks.find().count() === 0) {
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
 		accepted_by: ssId,
+		created_date: new Date().getTime(),
 		projectId: paceId,
 		owner: ssId,
 		timeEstimate: 30
@@ -102,6 +108,7 @@ if (Tasks.find().count() === 0) {
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
 		accepted_by: ssId,
+		created_date: new Date().getTime(),
 		projectId: paceId,
 		owner: ssId,
 		timeEstimate: 30
@@ -113,6 +120,7 @@ if (Tasks.find().count() === 0) {
 		completed: false,
 		accepted_date: PaceHelper.todayString(),
 		accepted_by: ssId,
+		created_date: new Date().getTime(),
 		projectId: paceId,
 		owner: ssId,
 		timeEstimate: 30
