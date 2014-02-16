@@ -1,7 +1,7 @@
 Template.header.helpers({
 	displayDate: function () {
 		var d = new Date();
-		return PaceHelper.dayOfWeek() + " " + d.getDate() + "th of " + PaceHelper.monthName();
+		return PaceHelper.dayOfWeek() + " " + d.getDate() + ". " + PaceHelper.monthName();
 	},
 	estimatedRun: function () {
 		var tasks = Tasks.find({accepted_date: PaceHelper.todayString()}).fetch();

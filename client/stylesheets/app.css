@@ -667,23 +667,100 @@ header {
   #projectsDrawer .task {
     border-bottom: 1px solid white; }
 
-/* line 20, ../sass/app.scss */
+/* line 11, ../sass/modules/_borderMenu.scss */
+*,
+*:after,
+*::before {
+  box-sizing: border-box; }
+
+/* line 15, ../sass/modules/_borderMenu.scss */
+.bt-overlay {
+  position: absolute;
+  width: 100%; }
+
+/* line 19, ../sass/modules/_borderMenu.scss */
+.bt-menu-open .bt-overlay {
+  height: 100%; }
+
+/* line 23, ../sass/modules/_borderMenu.scss */
+.bt-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #333333;
+  background-color: rgba(0, 0, 0, 0);
+  transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
+  z-index: 100; }
+  /* line 36, ../sass/modules/_borderMenu.scss */
+  .bt-menu.bt-menu-open {
+    height: 100%;
+    border-width: 30px 30px 30px 90px;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: border-width 0.3s, background-color 0.3s; }
+    /* line 41, ../sass/modules/_borderMenu.scss */
+    .bt-menu.bt-menu-open ul li {
+      visibility: visible;
+      opacity: 1;
+      transition: transform 0.3s, opacity 0.3s;
+      transform: translate3d(0, 0, 0); }
+  /* line 49, ../sass/modules/_borderMenu.scss */
+  .bt-menu ul {
+    position: fixed;
+    top: 75px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 90px;
+    list-style: none;
+    backface-visibility: hidden; }
+    /* line 58, ../sass/modules/_borderMenu.scss */
+    .bt-menu ul li {
+      padding: 16px 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: transform 0.3s, opacity 0.2s, visibility 0s 0.3s; }
+    /* line 64, ../sass/modules/_borderMenu.scss */
+    .bt-menu ul li, .bt-menu ul li a {
+      display: block;
+      width: 100%;
+      text-align: center; }
+    /* line 69, ../sass/modules/_borderMenu.scss */
+    .bt-menu ul li:first-child {
+      transform: translate3d(-100%, 200%, 0); }
+    /* line 70, ../sass/modules/_borderMenu.scss */
+    .bt-menu ul li:nth-child(2) {
+      transform: translate3d(-100%, 100%, 0); }
+    /* line 71, ../sass/modules/_borderMenu.scss */
+    .bt-menu ul li:nth-child(3) {
+      transform: translate3d(-100%, 0, 0); }
+    /* line 72, ../sass/modules/_borderMenu.scss */
+    .bt-menu ul li:nth-child(4) {
+      transform: translate3d(-100%, -100%, 0); }
+    /* line 73, ../sass/modules/_borderMenu.scss */
+    .bt-menu ul li:nth-child(5) {
+      transform: translate3d(-100%, -200%, 0); }
+
+/* line 21, ../sass/app.scss */
 .ui-slider-horizontal {
   height: 0.4em;
   width: 200px; }
 
-/* line 24, ../sass/app.scss */
+/* line 25, ../sass/app.scss */
 .ui-slider {
   position: relative;
   text-align: left; }
 
-/* line 29, ../sass/app.scss */
+/* line 30, ../sass/app.scss */
 .ui-widget-content {
   border: 1px solid red;
   background: green;
   color: blue; }
 
-/* line 34, ../sass/app.scss */
+/* line 35, ../sass/app.scss */
 .ui-slider-handle {
   position: absolute;
   z-index: 2;
@@ -692,6 +769,6 @@ header {
   top: -0.3em;
   margin-left: -0.6em;
   background: black; }
-  /* line 43, ../sass/app.scss */
+  /* line 44, ../sass/app.scss */
   .ui-slider-handle:focus {
     outline: none; }
