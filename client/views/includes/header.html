@@ -1,16 +1,14 @@
-<!-- Move to includes -->
 <template name="header">
-<header id="header">
-	<div class="wrapper">
-		<div class="logo clickable bt-menu-trigger">Pace</div>
-		<div id="dailyInfo">
-			<div>{{ displayDate }}</div>
-			<div>{{ estimatedRun }}</div>
+	<header id="header">
+		<div class="wrapper">
+			<div class="logo clickable bt-menu-trigger">Pace</div>
+			<div id="dailyInfo">
+				<div>{{ displayDate }}</div>
+				<div>{{ estimatedRun }}</div>
+			</div>
+			<div class="loginBtns">
+				{{loginButtons}}
+			</div>
 		</div>
-		<div class="loginBtns">
-			{{loginButtons}}
-		</div>
-	</div>
-</header>
-
+	</header>
 </template>

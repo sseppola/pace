@@ -1,4 +1,4 @@
-Template.taskTemplate.events({
+Template.singleTask.events({
 	'click input[type=checkbox]': function (e) {
 		e.preventDefault();
 

@@ -1,19 +1,27 @@
-var estDep = new Deps.Dependency;
+// --------------------------------------
+// 		singleProjectTask template
+// --------------------------------------
 
-Template.newProjectTask.helpers({
+
+// --------------------------------------
+// 		newProjectTaskTemplate template
+// --------------------------------------
+var timeEstimateDep = new Deps.Dependency;
+
+Template.newProjectTaskTemplate.helpers({
 	creatingNewTask: function () {
 		return Session.get('newTask-' + this._id); // returns the project id
 	},
 	timeEstimate: function () {
-		estDep.depend();
+		timeEstimateDep.depend();
 		var v = Session.get('estimate-' + this._id);
 		return v + "min";
 	}
 });
 
-Template.newProjectTask.events({
+Template.newProjectTaskTemplate.events({
 	'click .newTaskTrigger': function () {
-		Session.set('newTask-'+this._id, true);
+		Session.set('newTask-' + this._id, true);
 	},
 	'submit form': function (e) {
 		e.preventDefault();
@@ -35,7 +43,7 @@ Template.newProjectTask.events({
 });
 
 // This is to retain the state of the drawer in a redraw
-Template.newProjectTask.rendered = function () {
+Template.newProjectTaskTemplate.rendered = function () {
 	var $project = this.data;
 	var value = Session.get('estimate-' + $project._id);
 	if (!value) {
@@ -52,7 +60,7 @@ Template.newProjectTask.rendered = function () {
 		change: function(e, ui) {
 			var val = $s.slider('value');
 			Session.set('estimate-' + $project._id, val);
-			estDep.changed();
+			timeEstimateDep.changed();
 		}
 	})
 }

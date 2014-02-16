@@ -1,5 +1,11 @@
-<template name="taskTemplate">
+<template name="singleTask">
 	<div>
 		<input type="checkbox" {{#if completed}}checked{{/if}} /><span>{{title}}</span>
+	</div>
+</template>
+
+<template name="emptyTask">
+	<div>
+		Drag task here
 	</div>
 </template>

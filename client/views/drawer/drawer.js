@@ -1,12 +1,3 @@
-Template.projectsDrawer.helpers({
-	// drawerState: function () {
-	// 	if (!Session.get('drawerState'))
-	// 		Session.set('drawerState', 'closed');
-
-	// 	return Session.get('drawerState');
-	// }
-});
-
 Template.projectsDrawer.events({
 	'click .tag': function () {
 		var $d = $('.drawer');
@@ -28,7 +19,3 @@ Template.projectsDrawer.rendered = function () {
 
 	$('.drawer').removeClass('open closed').addClass(Session.get('drawerState'));
 };
-
-
-
-

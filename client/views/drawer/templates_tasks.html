@@ -1,4 +1,11 @@
-<template name="newProjectTask">
+<template name="projectTaskTemplate">
+	<div class="task">
+		<p>{{title}}</p>
+	</div>
+</template>
+
+
+<template name="newProjectTaskTemplate">
 	<div class="task">
 		{{#if creatingNewTask}}
 			<form>
