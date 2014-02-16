@@ -25,8 +25,6 @@ Template.newProjectTask.events({
 			timeEstimate: Session.get('estimate-' + projectId)
 		}
 
-		console.log(task);
-
 		Meteor.call('createTask', task, function (error, id) {
 			if (error)
 				alert(error.reason);
@@ -36,6 +34,7 @@ Template.newProjectTask.events({
 	}
 });
 
+// This is to retain the state of the drawer in a redraw
 Template.newProjectTask.rendered = function () {
 	var $project = this.data;
 	var value = Session.get('estimate-' + $project._id);

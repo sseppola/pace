@@ -1,6 +1,5 @@
 Template.borderMenu.rendered = function () {
 	function init() {
-		console.log("initializing");
 		var $menu = $('#bt-menu'),
 			$trigger = $('.bt-menu-trigger'),
 			eventType = 'click', // mobilecheck() ? 'touchstart' : 'click',
