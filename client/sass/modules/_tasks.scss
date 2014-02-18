@@ -1,20 +1,117 @@
+/* Variables */
+
+/* P1 */
+$p1-vert-margin: 53px;
+$p1-font-size: 48px;
+$p1-height: 74px;
+$p1-color: #e84f4f;
+
+/* P2 */
+$p2-vert-margin: 38px;
+$p2-font-size: 30px;
+$p2-height: 44px;
+$p2-color: #70bcc4;
+
+/* P3 */
+$p3-vert-margin: $p2-vert-margin;
+$p3-font-size: $p2-font-size;
+$p3-height: $p2-height;
+$p3-color: #fcb041;
+
+
 #taskList {
 	z-index: 10;
 }
 .task {
+	text-align: left;
+	width: 100%;
+	border-bottom: 1px solid #e5e7ea;
 	input {
 		margin-right: 10px;
 	}
+	.checkbox {
+		border: 3px solid black;
+		border-radius: 3px;
+		height: 20px;
+		width: 20px;
+		display: inline-block;
+		overflow: hidden;
+		vertical-align: top;
+		.window {
+			width: 100%;
+			height: 100%;
+			color: #fff;
+			&:hover {
+				opacity: 0;
+			}
+		}
+	}
 }
+
+.task-info {
+	display: inline-block;
+	vertical-align: top;
+}
+.task-title {
+	
+}
+.task-project {
+	font-size: 10px;
+	line-height: 10px;
+}
+
 .priority-1 {
-	@include adjust-font-size-to(26px);
+	font-size: $p1-font-size;
+	line-height: $p1-font-size;
+	.checkbox {
+		border-color: $p1-color;
+		height: $p1-height;
+		width: $p1-height;
+		margin: $p1-vert-margin 50px $p1-vert-margin 0;
+	}
+	.window {
+		background: $p1-color;
+	}
+	.task-info {
+		height: $p1-height;
+		margin: $p1-vert-margin 0;
+	}
 }
+
 .priority-2 {
-	@include adjust-font-size-to(22px);
+	font-size: $p2-font-size;
+	line-height: $p2-font-size;
+	.checkbox {
+		border-color: $p2-color;
+		width: $p2-height;
+		height: $p2-height;
+		margin: $p2-vert-margin 80px $p2-vert-margin 0;
+	}
+	.window {
+		background: $p2-color;
+	}
+	.task-info {
+		height: $p2-height;
+		margin: $p2-vert-margin 0;
+	}
 }
+
 .priority-3 {
-	@include adjust-font-size-to(18px);
+	font-size: $p3-font-size;
+	.checkbox {
+		border-color: $p3-color;
+		width: $p3-height;
+		height: $p3-height;
+		margin: $p3-vert-margin 80px $p3-vert-margin 0;
+	}
+	.window {
+		background: $p3-color;
+	}
+	.task-info {
+		height: $p3-height;
+		margin: $p3-vert-margin 0;
+	}
 }
 .priority-secondary {
-	@include adjust-font-size-to(16px);
+
 }
