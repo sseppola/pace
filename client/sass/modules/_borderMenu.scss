@@ -31,28 +31,31 @@ $border-l-w: 90px !default;
     border-color: $border-color;
     background-color: rgba(0,0,0,0);
     transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
-    z-index: 100;
 
     &.bt-menu-open {
         height: 100%;
         border-width: $border-top-w $border-r-w $border-btm-w $border-l-w;
         background-color: $border-center-color;
         transition: border-width 0.3s, background-color 0.3s;
-        ul li {
-            visibility: visible;
-            opacity: 1;
-            transition: transform 0.3s, opacity 0.3s;
-            transform: translate3d(0,0,0);
+        z-index: 10;
+        ul {
+            left: 0;
+            li {
+                visibility: visible;
+                opacity: 1;
+                transition: transform 0.3s, opacity 0.3s;
+                transform: translate3d(0,0,0);
+            }
         }
     }
 
     ul {
         position: fixed;
+        width: 90px;
         top: 75px;
-        left: 0;
+        left: -90px;
         margin: 0;
         padding: 0;
-        width: 90px;
         list-style: none;
         backface-visibility: hidden;
         li {

@@ -590,26 +590,30 @@ header {
   display: inline-block;
   height: 100px; }
 
-/* line 2, ../sass/modules/_tasks.scss */
+/* line 1, ../sass/modules/_tasks.scss */
+#taskList {
+  z-index: 10; }
+
+/* line 5, ../sass/modules/_tasks.scss */
 .task input {
   margin-right: 10px; }
 
-/* line 6, ../sass/modules/_tasks.scss */
+/* line 9, ../sass/modules/_tasks.scss */
 .priority-1 {
   font-size: 1.625em;
   line-height: 1.84615em; }
 
-/* line 9, ../sass/modules/_tasks.scss */
+/* line 12, ../sass/modules/_tasks.scss */
 .priority-2 {
   font-size: 1.375em;
   line-height: 2.18182em; }
 
-/* line 12, ../sass/modules/_tasks.scss */
+/* line 15, ../sass/modules/_tasks.scss */
 .priority-3 {
   font-size: 1.125em;
   line-height: 1.33333em; }
 
-/* line 15, ../sass/modules/_tasks.scss */
+/* line 18, ../sass/modules/_tasks.scss */
 .priority-secondary {
   font-size: 1em;
   line-height: 1.5em; }
@@ -693,54 +697,57 @@ header {
   border-style: solid;
   border-color: #333333;
   background-color: rgba(0, 0, 0, 0);
-  transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s;
-  z-index: 100; }
-  /* line 36, ../sass/modules/_borderMenu.scss */
+  transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s; }
+  /* line 35, ../sass/modules/_borderMenu.scss */
   .bt-menu.bt-menu-open {
     height: 100%;
     border-width: 30px 30px 30px 90px;
     background-color: rgba(0, 0, 0, 0.3);
-    transition: border-width 0.3s, background-color 0.3s; }
+    transition: border-width 0.3s, background-color 0.3s;
+    z-index: 10; }
     /* line 41, ../sass/modules/_borderMenu.scss */
-    .bt-menu.bt-menu-open ul li {
-      visibility: visible;
-      opacity: 1;
-      transition: transform 0.3s, opacity 0.3s;
-      transform: translate3d(0, 0, 0); }
-  /* line 49, ../sass/modules/_borderMenu.scss */
+    .bt-menu.bt-menu-open ul {
+      left: 0; }
+      /* line 43, ../sass/modules/_borderMenu.scss */
+      .bt-menu.bt-menu-open ul li {
+        visibility: visible;
+        opacity: 1;
+        transition: transform 0.3s, opacity 0.3s;
+        transform: translate3d(0, 0, 0); }
+  /* line 52, ../sass/modules/_borderMenu.scss */
   .bt-menu ul {
     position: fixed;
+    width: 90px;
     top: 75px;
-    left: 0;
+    left: -90px;
     margin: 0;
     padding: 0;
-    width: 90px;
     list-style: none;
     backface-visibility: hidden; }
-    /* line 58, ../sass/modules/_borderMenu.scss */
+    /* line 61, ../sass/modules/_borderMenu.scss */
     .bt-menu ul li {
       padding: 16px 0;
       opacity: 0;
       visibility: hidden;
       transition: transform 0.3s, opacity 0.2s, visibility 0s 0.3s; }
-    /* line 64, ../sass/modules/_borderMenu.scss */
+    /* line 67, ../sass/modules/_borderMenu.scss */
     .bt-menu ul li, .bt-menu ul li a {
       display: block;
       width: 100%;
       text-align: center; }
-    /* line 69, ../sass/modules/_borderMenu.scss */
+    /* line 72, ../sass/modules/_borderMenu.scss */
     .bt-menu ul li:first-child {
       transform: translate3d(-100%, 200%, 0); }
-    /* line 70, ../sass/modules/_borderMenu.scss */
+    /* line 73, ../sass/modules/_borderMenu.scss */
     .bt-menu ul li:nth-child(2) {
       transform: translate3d(-100%, 100%, 0); }
-    /* line 71, ../sass/modules/_borderMenu.scss */
+    /* line 74, ../sass/modules/_borderMenu.scss */
     .bt-menu ul li:nth-child(3) {
       transform: translate3d(-100%, 0, 0); }
-    /* line 72, ../sass/modules/_borderMenu.scss */
+    /* line 75, ../sass/modules/_borderMenu.scss */
     .bt-menu ul li:nth-child(4) {
       transform: translate3d(-100%, -100%, 0); }
-    /* line 73, ../sass/modules/_borderMenu.scss */
+    /* line 76, ../sass/modules/_borderMenu.scss */
     .bt-menu ul li:nth-child(5) {
       transform: translate3d(-100%, -200%, 0); }
 
