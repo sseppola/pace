@@ -23,3 +23,10 @@ Template.header.helpers({
 			return "No work planned yet";
 	}
 });
+
+Template.header.events({
+	'click .bt-menu-trigger': function () {
+		console.log("header trigger");
+		$('#bt-menu').addClass('bt-menu-open');
+	}
+});
