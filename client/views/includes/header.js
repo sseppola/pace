@@ -25,8 +25,5 @@ Template.header.helpers({
 });
 
 Template.header.events({
-	'click .bt-menu-trigger': function () {
-		console.log("header trigger");
-		$('#bt-menu').addClass('bt-menu-open');
-	}
+	'click .bt-menu-trigger': PaceHelper.openBorderMenu
 });
