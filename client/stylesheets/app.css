@@ -632,60 +632,69 @@ header {
 /* line 58, ../sass/modules/_tasks.scss */
 .task-project {
   font-size: 10px;
-  line-height: 10px; }
+  line-height: 10px;
+  text-transform: uppercase; }
 
-/* line 63, ../sass/modules/_tasks.scss */
+/* line 64, ../sass/modules/_tasks.scss */
 .priority-1 {
   font-size: 48px;
   line-height: 48px; }
-  /* line 66, ../sass/modules/_tasks.scss */
+  /* line 67, ../sass/modules/_tasks.scss */
   .priority-1 .checkbox {
     border-color: #e84f4f;
     height: 74px;
     width: 74px;
     margin: 53px 50px 53px 0; }
-  /* line 72, ../sass/modules/_tasks.scss */
+  /* line 73, ../sass/modules/_tasks.scss */
   .priority-1 .window {
     background: #e84f4f; }
-  /* line 75, ../sass/modules/_tasks.scss */
+  /* line 76, ../sass/modules/_tasks.scss */
   .priority-1 .task-info {
     height: 74px;
     margin: 53px 0; }
 
-/* line 81, ../sass/modules/_tasks.scss */
+/* line 82, ../sass/modules/_tasks.scss */
 .priority-2 {
   font-size: 30px;
   line-height: 30px; }
-  /* line 84, ../sass/modules/_tasks.scss */
+  /* line 85, ../sass/modules/_tasks.scss */
   .priority-2 .checkbox {
     border-color: #70bcc4;
     width: 44px;
     height: 44px;
     margin: 38px 80px 38px 0; }
-  /* line 90, ../sass/modules/_tasks.scss */
+  /* line 91, ../sass/modules/_tasks.scss */
   .priority-2 .window {
     background: #70bcc4; }
-  /* line 93, ../sass/modules/_tasks.scss */
+  /* line 94, ../sass/modules/_tasks.scss */
   .priority-2 .task-info {
     height: 44px;
     margin: 38px 0; }
 
-/* line 99, ../sass/modules/_tasks.scss */
+/* line 100, ../sass/modules/_tasks.scss */
 .priority-3 {
   font-size: 30px; }
-  /* line 101, ../sass/modules/_tasks.scss */
+  /* line 102, ../sass/modules/_tasks.scss */
   .priority-3 .checkbox {
     border-color: #fcb041;
     width: 44px;
     height: 44px;
     margin: 38px 80px 38px 0; }
-  /* line 107, ../sass/modules/_tasks.scss */
+  /* line 108, ../sass/modules/_tasks.scss */
   .priority-3 .window {
     background: #fcb041; }
-  /* line 110, ../sass/modules/_tasks.scss */
+  /* line 111, ../sass/modules/_tasks.scss */
   .priority-3 .task-info {
     height: 44px;
     margin: 38px 0; }
+
+/*$secondary-color*/
+/* line 121, ../sass/modules/_tasks.scss */
+.priority-secondary .checkbox {
+  margin: 33px 27px 33px 0; }
+/* line 124, ../sass/modules/_tasks.scss */
+.priority-secondary .task-info {
+  margin: 23px 0; }
 
 /* line 1, ../sass/modules/_drawer.scss */
 #projectsDrawer {

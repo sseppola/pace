@@ -58,6 +58,7 @@ $p3-color: #fcb041;
 .task-project {
 	font-size: 10px;
 	line-height: 10px;
+	text-transform: uppercase;
 }
 
 .priority-1 {
@@ -112,6 +113,15 @@ $p3-color: #fcb041;
 		margin: $p3-vert-margin 0;
 	}
 }
-.priority-secondary {
 
+$secondary-font-size: 20px;
+/*$secondary-color*/
+$secondary-vert-margin: 33px;
+.priority-secondary {
+	.checkbox {
+		margin: $secondary-vert-margin 27px $secondary-vert-margin 0;
+	}
+	.task-info {
+		margin: ($secondary-vert-margin - 10px) 0;
+	}
 }

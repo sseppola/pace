@@ -10,5 +10,8 @@ Template.taskList.helpers({
 	},
 	secondary: function () {
 		return Tasks.find({priority: null, accepted_date: PaceHelper.todayString()});
+	},
+	n_secondary: function () {
+		return Tasks.find({priority: null, accepted_date: PaceHelper.todayString()}).count();
 	}
 });

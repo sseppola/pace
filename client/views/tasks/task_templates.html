@@ -1,6 +1,6 @@
 <template name="singleTask">
 
-	<div class="checkbox completed-{{completed}}">
+	<div class="checkbox clickable completed-{{completed}}" data-completed="{{ completed }}">
 		{{#if completed}}
 			X
 		{{else}}
