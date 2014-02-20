@@ -1,5 +1,5 @@
 <template name="taskList">
-	<div id="taskList">
+	<div id="taskList" class="exclBox">
 		<div class="task priority-1">
 			{{#if p1}}
 				{{> singleTask p1}}
@@ -24,8 +24,10 @@
 			{{/if}}
 		</div>
 		
-		</br>
-		{{n_secondary}} secondary tasks:
+		<div class="wrapper secondary-title">
+			{{n_secondary}} secondary tasks:
+		</div>
+		
 		{{#each secondary}}
 			<div class="task priority-secondary">
 				{{> singleTask}}

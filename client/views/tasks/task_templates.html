@@ -1,23 +1,23 @@
 <template name="singleTask">
-
-	<div class="checkbox clickable completed-{{completed}}" data-completed="{{ completed }}">
-		{{#if completed}}
-			X
-		{{else}}
-			<div class="window">{{priority}}</div>
-			<div class="back">O</div>
-		{{/if}}
+	<div class="wrapper">
+		<div class="checkbox clickable completed-{{completed}}" data-completed="{{ completed }}">
+			{{#if completed}}
+				X
+			{{else}}
+				<div class="window">{{priority}}</div>
+				<div class="back">O</div>
+			{{/if}}
+		</div>
+		<div class="task-info">
+			<div class="task-title">{{title}}</div>
+			<div class="task-project">{{projectName}}</div>
+		</div>
 	</div>
-	<div class="task-info">
-		<div class="task-title">{{title}}</div>
-		<div class="task-project">{{projectName}}</div>
-	</div>
-	
 	<!-- <input type="checkbox" {{#if completed}}checked{{/if}} /><span>{{title}}</span> -->
 </template>
 
 <template name="emptyTask">
-	<div>
+	<div class="wrapper">
 		Drag task here
 	</div>
 </template>

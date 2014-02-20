@@ -594,20 +594,29 @@ header {
 /* P1 */
 /* P2 */
 /* P3 */
-/* line 22, ../sass/modules/_tasks.scss */
-#taskList {
-  z-index: 10; }
-
+/* Secondary text color */
 /* line 25, ../sass/modules/_tasks.scss */
+#taskList {
+  width: 95%;
+  display: inline-block;
+  /*z-index: 10;*/ }
+  /* line 28, ../sass/modules/_tasks.scss */
+  #taskList .wrapper {
+    text-align: left;
+    display: inline-block;
+    width: 85%; }
+
+/* line 35, ../sass/modules/_tasks.scss */
 .task {
-  text-align: left;
   width: 100%;
-  border-bottom: 1px solid #e5e7ea; }
-  /* line 29, ../sass/modules/_tasks.scss */
+  border-bottom: 1px solid #e5e7ea;
+  text-align: center;
+  position: relative; }
+  /* line 41, ../sass/modules/_tasks.scss */
   .task input {
     margin-right: 10px; }
 
-/* line 34, ../sass/modules/_tasks.scss */
+/* line 46, ../sass/modules/_tasks.scss */
 .checkbox {
   border: 3px solid black;
   border-radius: 3px;
@@ -616,21 +625,21 @@ header {
   display: inline-block;
   overflow: hidden;
   vertical-align: top; }
-  /* line 42, ../sass/modules/_tasks.scss */
+  /* line 54, ../sass/modules/_tasks.scss */
   .checkbox .window {
     width: 100%;
     height: 100%;
     color: #fff; }
-    /* line 46, ../sass/modules/_tasks.scss */
+    /* line 58, ../sass/modules/_tasks.scss */
     .checkbox .window:hover {
       opacity: 0; }
 
-/* line 52, ../sass/modules/_tasks.scss */
+/* line 64, ../sass/modules/_tasks.scss */
 .task-info {
   display: inline-block;
   vertical-align: top; }
 
-/* line 59, ../sass/modules/_tasks.scss */
+/* line 71, ../sass/modules/_tasks.scss */
 .task-project {
   font-size: 10px;
   line-height: 10px;
@@ -638,67 +647,73 @@ header {
   color: gray;
   letter-spacing: 2px; }
 
-/* line 67, ../sass/modules/_tasks.scss */
+/* line 79, ../sass/modules/_tasks.scss */
 .priority-1 {
   font-size: 48px;
   line-height: 48px; }
-  /* line 70, ../sass/modules/_tasks.scss */
+  /* line 82, ../sass/modules/_tasks.scss */
   .priority-1 .checkbox {
     border-color: #e84f4f;
     height: 74px;
     width: 74px;
     margin: 53px 50px 53px 0; }
-  /* line 76, ../sass/modules/_tasks.scss */
+  /* line 88, ../sass/modules/_tasks.scss */
   .priority-1 .window {
     background: #e84f4f; }
-  /* line 79, ../sass/modules/_tasks.scss */
+  /* line 91, ../sass/modules/_tasks.scss */
   .priority-1 .task-info {
     height: 74px;
     margin: 53px 0; }
 
-/* line 85, ../sass/modules/_tasks.scss */
+/* line 97, ../sass/modules/_tasks.scss */
 .priority-2 {
   font-size: 30px;
   line-height: 30px; }
-  /* line 88, ../sass/modules/_tasks.scss */
+  /* line 100, ../sass/modules/_tasks.scss */
   .priority-2 .checkbox {
     border-color: #70bcc4;
     width: 44px;
     height: 44px;
     margin: 38px 80px 38px 0; }
-  /* line 94, ../sass/modules/_tasks.scss */
+  /* line 106, ../sass/modules/_tasks.scss */
   .priority-2 .window {
     background: #70bcc4; }
-  /* line 97, ../sass/modules/_tasks.scss */
+  /* line 109, ../sass/modules/_tasks.scss */
   .priority-2 .task-info {
     height: 44px;
     margin: 38px 0; }
 
-/* line 103, ../sass/modules/_tasks.scss */
+/* line 115, ../sass/modules/_tasks.scss */
 .priority-3 {
   font-size: 30px; }
-  /* line 105, ../sass/modules/_tasks.scss */
+  /* line 117, ../sass/modules/_tasks.scss */
   .priority-3 .checkbox {
     border-color: #fcb041;
     width: 44px;
     height: 44px;
     margin: 38px 80px 38px 0; }
-  /* line 111, ../sass/modules/_tasks.scss */
+  /* line 123, ../sass/modules/_tasks.scss */
   .priority-3 .window {
     background: #fcb041; }
-  /* line 114, ../sass/modules/_tasks.scss */
+  /* line 126, ../sass/modules/_tasks.scss */
   .priority-3 .task-info {
     height: 44px;
     margin: 38px 0; }
 
-/* line 125, ../sass/modules/_tasks.scss */
+/* line 137, ../sass/modules/_tasks.scss */
 .priority-secondary .checkbox {
   margin: 33px 27px 33px 0;
   border-width: 1px;
   border-color: #9aa1b0; }
-/* line 130, ../sass/modules/_tasks.scss */
+/* line 142, ../sass/modules/_tasks.scss */
 .priority-secondary .task-info {
   margin: 23px 0; }
+
+/* line 147, ../sass/modules/_tasks.scss */
+.secondary-title {
+  font-size: 18px;
+  color: #5f6e8b;
+  margin: 33px 0; }
 
 /* line 5, ../sass/modules/_drawer.scss */
 #projectsDrawer {

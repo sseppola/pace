@@ -18,14 +18,26 @@ $p3-font-size: $p2-font-size;
 $p3-height: $p2-height;
 $p3-color: #fcb041;
 
+/* Secondary text color */
+$secondary-title-color: #5f6e8b;
+$secondary-title-font-size: 18px;
 
 #taskList {
-	z-index: 10;
+	width: 95%;
+	display: inline-block;
+	.wrapper { 					// this will apply to the text in the tasks
+		text-align: left;
+		display: inline-block;
+		width: 85%;
+	}
+	/*z-index: 10;*/
 }
 .task {
-	text-align: left;
 	width: 100%;
 	border-bottom: 1px solid #e5e7ea;
+	text-align: center;
+	position: relative;
+	
 	input {
 		margin-right: 10px;
 	}
@@ -130,4 +142,11 @@ $secondary-vert-margin: 33px;
 	.task-info {
 		margin: ($secondary-vert-margin - 10px) 0;
 	}
+}
+
+.secondary-title {
+	font-size: $secondary-title-font-size;
+	color: $secondary-title-color;
+	margin: 33px 0;
+
 }
