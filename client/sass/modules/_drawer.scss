@@ -1,16 +1,21 @@
+$tag-height: 40px;
+$neg-tag-height: -40px;
 #projectsDrawer {
 	position: fixed;
-	bottom: 0;
+	bottom: $neg-tag-height;
 	left: 0;
 	width: 100%;
 	color: $drawer-text-color;
 	
 	.tag {
 		display: inline-block;
+		position: relative;
+		top: $neg-tag-height;
 		background: $drawer-background-color;
-		height: 40px;
-		line-height: 40px;
+		height: $tag-height;
+		line-height: $tag-height;
 		width: 200px;
+
 	}
 
 	input {
@@ -19,7 +24,8 @@
 
 	.drawer {
 		width: 100%;
-		// height: 0px;
+		position: relative;
+		top: $neg-tag-height;
 		background: $drawer-background-color;
 		overflow-y: hidden;
 		overflow-x: scroll;
