@@ -1,3 +1,11 @@
+Template.singleTask.helpers({
+	projectName: function () {
+		var id = this.projectId;
+		var project = Projects.findOne({_id: id});
+		return project.name;
+	}
+});
+
 Template.singleTask.events({
 	'click input[type=checkbox]': function (e) {
 		e.preventDefault();
