@@ -1,5 +1,7 @@
-$tag-height: 40px;
-$neg-tag-height: -40px;
+$tag-width: 42px;
+$tag-height: 42px;
+$neg-tag-height: -42px;
+
 #projectsDrawer {
 	position: fixed;
 	bottom: $neg-tag-height;
@@ -14,8 +16,9 @@ $neg-tag-height: -40px;
 		background: $drawer-background-color;
 		height: $tag-height;
 		line-height: $tag-height;
-		width: 200px;
-
+		width: $tag-width;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
 	}
 
 	input {

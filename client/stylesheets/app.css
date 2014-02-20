@@ -698,44 +698,46 @@ header {
 .priority-secondary .task-info {
   margin: 23px 0; }
 
-/* line 3, ../sass/modules/_drawer.scss */
+/* line 5, ../sass/modules/_drawer.scss */
 #projectsDrawer {
   position: fixed;
-  bottom: -40px;
+  bottom: -42px;
   left: 0;
   width: 100%;
   color: white; }
-  /* line 10, ../sass/modules/_drawer.scss */
+  /* line 12, ../sass/modules/_drawer.scss */
   #projectsDrawer .tag {
     display: inline-block;
     position: relative;
-    top: -40px;
-    background: blue;
-    height: 40px;
-    line-height: 40px;
-    width: 200px; }
-  /* line 21, ../sass/modules/_drawer.scss */
+    top: -42px;
+    background: #252a3a;
+    height: 42px;
+    line-height: 42px;
+    width: 42px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+  /* line 24, ../sass/modules/_drawer.scss */
   #projectsDrawer input {
-    background: #3333ff; }
-  /* line 25, ../sass/modules/_drawer.scss */
+    background: #394159; }
+  /* line 28, ../sass/modules/_drawer.scss */
   #projectsDrawer .drawer {
     width: 100%;
     position: relative;
-    top: -40px;
-    background: blue;
+    top: -42px;
+    background: #252a3a;
     overflow-y: hidden;
     overflow-x: scroll;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-    /* line 34, ../sass/modules/_drawer.scss */
+    /* line 37, ../sass/modules/_drawer.scss */
     #projectsDrawer .drawer.open {
       height: 400px; }
-    /* line 37, ../sass/modules/_drawer.scss */
+    /* line 40, ../sass/modules/_drawer.scss */
     #projectsDrawer .drawer.closed {
       height: 0; }
-  /* line 42, ../sass/modules/_drawer.scss */
+  /* line 45, ../sass/modules/_drawer.scss */
   #projectsDrawer .project {
     width: 350px;
     margin-left: 20px;
@@ -743,7 +745,7 @@ header {
     height: 100%;
     vertical-align: top;
     position: relative; }
-  /* line 50, ../sass/modules/_drawer.scss */
+  /* line 53, ../sass/modules/_drawer.scss */
   #projectsDrawer .taskList {
     /*min-height: 200px;*/
     position: absolute;
@@ -751,7 +753,7 @@ header {
     bottom: 0;
     width: 100%;
     overflow-y: scroll; }
-  /* line 58, ../sass/modules/_drawer.scss */
+  /* line 61, ../sass/modules/_drawer.scss */
   #projectsDrawer .task {
     border-bottom: 1px solid white; }
 
