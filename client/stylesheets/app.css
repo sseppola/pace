@@ -598,25 +598,24 @@ header {
 /* line 25, ../sass/modules/_tasks.scss */
 #taskList {
   width: 95%;
-  display: inline-block;
-  /*z-index: 10;*/ }
+  display: inline-block; }
   /* line 28, ../sass/modules/_tasks.scss */
   #taskList .wrapper {
     text-align: left;
     display: inline-block;
     width: 85%; }
 
-/* line 35, ../sass/modules/_tasks.scss */
+/* line 34, ../sass/modules/_tasks.scss */
 .task {
   width: 100%;
   border-bottom: 1px solid #e5e7ea;
   text-align: center;
   position: relative; }
-  /* line 41, ../sass/modules/_tasks.scss */
+  /* line 40, ../sass/modules/_tasks.scss */
   .task input {
     margin-right: 10px; }
 
-/* line 46, ../sass/modules/_tasks.scss */
+/* line 45, ../sass/modules/_tasks.scss */
 .checkbox {
   border: 3px solid black;
   border-radius: 3px;
@@ -625,21 +624,21 @@ header {
   display: inline-block;
   overflow: hidden;
   vertical-align: top; }
-  /* line 54, ../sass/modules/_tasks.scss */
+  /* line 53, ../sass/modules/_tasks.scss */
   .checkbox .window {
     width: 100%;
     height: 100%;
     color: #fff; }
-    /* line 58, ../sass/modules/_tasks.scss */
+    /* line 57, ../sass/modules/_tasks.scss */
     .checkbox .window:hover {
       opacity: 0; }
 
-/* line 64, ../sass/modules/_tasks.scss */
+/* line 63, ../sass/modules/_tasks.scss */
 .task-info {
   display: inline-block;
   vertical-align: top; }
 
-/* line 71, ../sass/modules/_tasks.scss */
+/* line 70, ../sass/modules/_tasks.scss */
 .task-project {
   font-size: 10px;
   line-height: 10px;
@@ -647,82 +646,109 @@ header {
   color: gray;
   letter-spacing: 2px; }
 
-/* line 79, ../sass/modules/_tasks.scss */
+/* line 78, ../sass/modules/_tasks.scss */
 .priority-1 {
   font-size: 48px;
   line-height: 48px; }
-  /* line 82, ../sass/modules/_tasks.scss */
+  /* line 81, ../sass/modules/_tasks.scss */
   .priority-1 .checkbox {
     border-color: #e84f4f;
     height: 74px;
     width: 74px;
     margin: 53px 50px 53px 0; }
-  /* line 88, ../sass/modules/_tasks.scss */
+  /* line 87, ../sass/modules/_tasks.scss */
   .priority-1 .window {
     background: #e84f4f; }
-  /* line 91, ../sass/modules/_tasks.scss */
+  /* line 90, ../sass/modules/_tasks.scss */
   .priority-1 .task-info {
     height: 74px;
     margin: 53px 0; }
 
-/* line 97, ../sass/modules/_tasks.scss */
+/* line 96, ../sass/modules/_tasks.scss */
 .priority-2 {
   font-size: 30px;
   line-height: 30px; }
-  /* line 100, ../sass/modules/_tasks.scss */
+  /* line 99, ../sass/modules/_tasks.scss */
   .priority-2 .checkbox {
     border-color: #70bcc4;
     width: 44px;
     height: 44px;
     margin: 38px 80px 38px 0; }
-  /* line 106, ../sass/modules/_tasks.scss */
+  /* line 105, ../sass/modules/_tasks.scss */
   .priority-2 .window {
     background: #70bcc4; }
-  /* line 109, ../sass/modules/_tasks.scss */
+  /* line 108, ../sass/modules/_tasks.scss */
   .priority-2 .task-info {
     height: 44px;
     margin: 38px 0; }
 
-/* line 115, ../sass/modules/_tasks.scss */
+/* line 114, ../sass/modules/_tasks.scss */
 .priority-3 {
   font-size: 30px; }
-  /* line 117, ../sass/modules/_tasks.scss */
+  /* line 116, ../sass/modules/_tasks.scss */
   .priority-3 .checkbox {
     border-color: #fcb041;
     width: 44px;
     height: 44px;
     margin: 38px 80px 38px 0; }
-  /* line 123, ../sass/modules/_tasks.scss */
+  /* line 122, ../sass/modules/_tasks.scss */
   .priority-3 .window {
     background: #fcb041; }
-  /* line 126, ../sass/modules/_tasks.scss */
+  /* line 125, ../sass/modules/_tasks.scss */
   .priority-3 .task-info {
     height: 44px;
     margin: 38px 0; }
 
-/* line 137, ../sass/modules/_tasks.scss */
+/* line 136, ../sass/modules/_tasks.scss */
 .priority-secondary .checkbox {
   margin: 33px 27px 33px 0;
   border-width: 1px;
   border-color: #9aa1b0; }
-/* line 142, ../sass/modules/_tasks.scss */
+/* line 141, ../sass/modules/_tasks.scss */
 .priority-secondary .task-info {
   margin: 23px 0; }
 
-/* line 147, ../sass/modules/_tasks.scss */
+/* line 146, ../sass/modules/_tasks.scss */
 .secondary-title {
   font-size: 18px;
   color: #5f6e8b;
   margin: 33px 0; }
 
-/* line 5, ../sass/modules/_drawer.scss */
+/* line 9, ../sass/modules/_drawer.scss */
+#sideBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline;
+  height: 100%;
+  width: 56px;
+  background: #1d202a; }
+
+/* line 19, ../sass/modules/_drawer.scss */
+#moreProjectsBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: red;
+  height: 100%;
+  width: 56px; }
+
+/* line 28, ../sass/modules/_drawer.scss */
+#projectList {
+  display: block;
+  vertical-align: top;
+  margin-left: 56px;
+  margin-right: 56px; }
+
+/* line 35, ../sass/modules/_drawer.scss */
 #projectsDrawer {
   position: fixed;
   bottom: -42px;
   left: 0;
   width: 100%;
-  color: white; }
-  /* line 12, ../sass/modules/_drawer.scss */
+  color: white;
+  text-align: left; }
+  /* line 43, ../sass/modules/_drawer.scss */
   #projectsDrawer .tag {
     display: inline-block;
     position: relative;
@@ -733,10 +759,10 @@ header {
     width: 42px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
-  /* line 24, ../sass/modules/_drawer.scss */
+  /* line 55, ../sass/modules/_drawer.scss */
   #projectsDrawer input {
     background: #394159; }
-  /* line 28, ../sass/modules/_drawer.scss */
+  /* line 59, ../sass/modules/_drawer.scss */
   #projectsDrawer .drawer {
     width: 100%;
     position: relative;
@@ -748,13 +774,13 @@ header {
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-    /* line 37, ../sass/modules/_drawer.scss */
+    /* line 68, ../sass/modules/_drawer.scss */
     #projectsDrawer .drawer.open {
       height: 400px; }
-    /* line 40, ../sass/modules/_drawer.scss */
+    /* line 71, ../sass/modules/_drawer.scss */
     #projectsDrawer .drawer.closed {
       height: 0; }
-  /* line 45, ../sass/modules/_drawer.scss */
+  /* line 76, ../sass/modules/_drawer.scss */
   #projectsDrawer .project {
     width: 350px;
     margin-left: 20px;
@@ -762,7 +788,7 @@ header {
     height: 100%;
     vertical-align: top;
     position: relative; }
-  /* line 53, ../sass/modules/_drawer.scss */
+  /* line 84, ../sass/modules/_drawer.scss */
   #projectsDrawer .taskList {
     /*min-height: 200px;*/
     position: absolute;
@@ -770,7 +796,7 @@ header {
     bottom: 0;
     width: 100%;
     overflow-y: scroll; }
-  /* line 61, ../sass/modules/_drawer.scss */
+  /* line 92, ../sass/modules/_drawer.scss */
   #projectsDrawer .task {
     border-bottom: 1px solid white; }
 
@@ -854,23 +880,28 @@ header {
     .bt-menu ul li:nth-child(5) {
       transform: translate3d(-100%, -200%, 0); }
 
-/* line 21, ../sass/app.scss */
+/* line 24, ../sass/app.scss */
+body {
+  font-family: "Proxima Nova";
+  color: #253659; }
+
+/* line 29, ../sass/app.scss */
 .ui-slider-horizontal {
   height: 0.4em;
   width: 200px; }
 
-/* line 25, ../sass/app.scss */
+/* line 33, ../sass/app.scss */
 .ui-slider {
   position: relative;
   text-align: left; }
 
-/* line 30, ../sass/app.scss */
+/* line 38, ../sass/app.scss */
 .ui-widget-content {
   border: 1px solid red;
   background: green;
   color: blue; }
 
-/* line 35, ../sass/app.scss */
+/* line 43, ../sass/app.scss */
 .ui-slider-handle {
   position: absolute;
   z-index: 2;
@@ -879,6 +910,6 @@ header {
   top: -0.3em;
   margin-left: -0.6em;
   background: black; }
-  /* line 44, ../sass/app.scss */
+  /* line 52, ../sass/app.scss */
   .ui-slider-handle:focus {
     outline: none; }

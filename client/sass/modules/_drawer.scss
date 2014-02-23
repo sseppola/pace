@@ -2,12 +2,43 @@ $tag-width: 42px;
 $tag-height: 42px;
 $neg-tag-height: -42px;
 
+$sideBar-width: 56px;
+$sideBar-color: #1d202a;
+$carousell-btn-width: 56px;
+
+#sideBar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline;
+	height: 100%;
+	width: $sideBar-width;
+	background: $sideBar-color;
+}
+
+#moreProjectsBtn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: red;
+	height: 100%;
+	width: $carousell-btn-width;
+}
+
+#projectList {
+	display: block;
+	vertical-align: top;
+	margin-left: $sideBar-width;
+	margin-right: $carousell-btn-width;
+}
+
 #projectsDrawer {
 	position: fixed;
 	bottom: $neg-tag-height;
 	left: 0;
 	width: 100%;
 	color: $drawer-text-color;
+	text-align: left;
 	
 	.tag {
 		display: inline-block;

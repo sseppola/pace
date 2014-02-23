@@ -4,6 +4,9 @@
 // Vertical rythm plugin: http://atendesigngroup.com/blog/vertical-rhythm-compass
 @include establish-baseline;
 
+$app-font: 'Proxima Nova';
+$app-text-color: #253659;
+
 
 // Projects drawer variables
 $drawer-text-color: #fff;
@@ -17,6 +20,11 @@ $drawer-background-color: #252a3a;
 @import "modules/_drawer.scss";
 @import "modules/_borderMenu.scss";
 
+
+body {
+	font-family: $app-font;
+	color: $app-text-color;
+}
 
 .ui-slider-horizontal {
 	height: 0.4em;
