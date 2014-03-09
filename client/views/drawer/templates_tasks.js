@@ -4,11 +4,20 @@
 
 Template.projectTaskTemplate.events({
 	'mousedown .task': function () {
-		console.log("mousedown");
 		Session.set('draggedTask', this._id);
 	}
+});
 
-})
+Template.projectTaskTemplate.helpers({
+	'taskClasses': function () {
+		var priority = "";
+
+		if (this.priority)
+			priority = "p" + this.priority;
+
+		return priority;
+	}
+});
 
 
 // --------------------------------------
@@ -31,10 +40,13 @@ Template.newProjectTaskTemplate.events({
 	'click .newTaskTrigger': function () {
 		Session.set('newTask-' + this._id, true);
 	},
+	'click #closeNewTask': function () {
+		Session.set('newTask-' + this._id, false);
+	},
+
 	'submit form': function (e) {
 		e.preventDefault();
 		var projectId = this._id;
-
 		var task = {
 			title: $(e.target).find('[name=title]').val(),
 			projectId: projectId,

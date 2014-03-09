@@ -50,6 +50,7 @@ $carousell-btn-width: 56px;
 	width: 100%;
 	color: $drawer-text-color;
 	text-align: left;
+	font-size: 13px;
 	
 	.tag {
 		display: inline-block;
@@ -107,5 +108,87 @@ $carousell-btn-width: 56px;
 	.task {
 		border-bottom: 1px solid #33394b;
 		text-align: left;
+	}
+
+	.task.p1 {color: $p1-color;}
+	.task.p2 {color: $p2-color;}
+	.task.p3 {color: $p3-color;}
+	.task.pSecond {color: #5f6e8b;}
+	.task {
+		&.p1, &.p2, &.p3, &.pSecond {
+			opacity: 0.75;
+			font-weight: 700;
+		}
+	}
+}
+
+.task {
+	form {
+		margin: 10px 0;
+		position: relative;
+	}
+	input {
+		margin: 5px 0;
+	}
+	input[type="text"] {
+		border: 0;
+		line-height: 15px;
+		color: #fff;
+		background: #33394b;
+	}
+	input[type="submit"] {
+		-webkit-appearance: none;
+		border: 0;
+		color: #fff;
+	}
+	input:focus {
+		outline: 0;
+		outline-offset: 0;
+	}
+	#closeNewTask {
+		position: absolute;
+		top: 0;
+		right: 15px;
+		display: none;
+	}
+}
+.task:hover {
+	#closeNewTask {
+		display: inline-block;
+	}
+}
+
+.ui-slider-horizontal {
+	height: 8px;
+	width: 200px;
+}
+.ui-slider {
+	position: relative;
+	text-align: left;
+	display: inline-block;
+	margin: 0px
+}
+.ui-slider:hover {
+	cursor: pointer;
+}
+
+.ui-widget-content {
+	// border: 2px solid #452;
+	border-radius: 2px;
+	background: #33394b;
+	color: blue;
+}
+.ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 2px;
+	height: 15px;
+	top: 0;
+	margin-left: 0;
+	margin-top: -3px;
+	background: red;
+
+	&:focus {
+		outline: none;
 	}
 }

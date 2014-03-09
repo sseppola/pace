@@ -401,7 +401,8 @@ header {
   left: 0;
   width: 100%;
   color: white;
-  text-align: left; }
+  text-align: left;
+  font-size: 13px; }
   #projectsDrawer .tag {
     display: inline-block;
     position: relative;
@@ -446,6 +447,73 @@ header {
   #projectsDrawer .task {
     border-bottom: 1px solid #33394b;
     text-align: left; }
+  #projectsDrawer .task.p1 {
+    color: #e84f4f; }
+  #projectsDrawer .task.p2 {
+    color: #70bcc4; }
+  #projectsDrawer .task.p3 {
+    color: #fcb041; }
+  #projectsDrawer .task.pSecond {
+    color: #5f6e8b; }
+  #projectsDrawer .task.p1, #projectsDrawer .task.p2, #projectsDrawer .task.p3, #projectsDrawer .task.pSecond {
+    opacity: 0.75;
+    font-weight: 700; }
+
+.task form {
+  margin: 10px 0;
+  position: relative; }
+.task input {
+  margin: 5px 0; }
+.task input[type="text"] {
+  border: 0;
+  line-height: 15px;
+  color: #fff;
+  background: #33394b; }
+.task input[type="submit"] {
+  -webkit-appearance: none;
+  border: 0;
+  color: #fff; }
+.task input:focus {
+  outline: 0;
+  outline-offset: 0; }
+.task #closeNewTask {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  display: none; }
+
+.task:hover #closeNewTask {
+  display: inline-block; }
+
+.ui-slider-horizontal {
+  height: 8px;
+  width: 200px; }
+
+.ui-slider {
+  position: relative;
+  text-align: left;
+  display: inline-block;
+  margin: 0px; }
+
+.ui-slider:hover {
+  cursor: pointer; }
+
+.ui-widget-content {
+  border-radius: 2px;
+  background: #33394b;
+  color: blue; }
+
+.ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 2px;
+  height: 15px;
+  top: 0;
+  margin-left: 0;
+  margin-top: -3px;
+  background: red; }
+  .ui-slider-handle:focus {
+    outline: none; }
 
 *,
 *:after,
@@ -515,27 +583,3 @@ header {
 body {
   font-family: "Proxima Nova";
   color: #253659; }
-
-.ui-slider-horizontal {
-  height: 0.4em;
-  width: 200px; }
-
-.ui-slider {
-  position: relative;
-  text-align: left; }
-
-.ui-widget-content {
-  border: 1px solid red;
-  background: green;
-  color: blue; }
-
-.ui-slider-handle {
-  position: absolute;
-  z-index: 2;
-  width: 1.2em;
-  height: 1.2em;
-  top: -0.3em;
-  margin-left: -0.6em;
-  background: #000; }
-  .ui-slider-handle:focus {
-    outline: none; }

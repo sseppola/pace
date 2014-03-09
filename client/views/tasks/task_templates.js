@@ -3,8 +3,8 @@ Template.singleTask.helpers({
 		var project = Projects.findOne({_id: this.projectId});
 		project = Projects.findOne({_id: this.projectId});
 
-		if (project)				// Important when db is not ready
-			return project.name;
+		// Important when db is not ready
+		return project && project.name;
 	}
 });
 

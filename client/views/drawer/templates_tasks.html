@@ -1,5 +1,5 @@
 <template name="projectTaskTemplate">
-	<div class="task">
+	<div class="task {{taskClasses}}">
 		<p>{{title}}</p>
 	</div>
 </template>
@@ -9,6 +9,7 @@
 	<div class="task">
 		{{#if creatingNewTask}}
 			<form>
+				<div id="closeNewTask" class="clickable">X</div>
 				<div>
 					<input type="text" name="title" placeholder="Task name" />
 				</div>

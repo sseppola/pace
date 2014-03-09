@@ -1,5 +1,6 @@
 <template name="taskList">
 	<div id="taskList" class="exclBox">
+		<!-- This can be improved by creating a custom handlebars block helper  -->
 		<div class="task priority-1 completed-{{p1.completed}} taskDrop">
 			{{#if p1}}
 				{{> singleTask p1}}
