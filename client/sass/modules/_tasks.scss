@@ -32,6 +32,9 @@ $secondary-title-font-size: 18px;
 		display: inline-block;
 		width: 85%;
 	}
+	.emptyTask {
+		margin: 20px 0;
+	}
 }
 .task {
 	width: 100%;
@@ -46,6 +49,11 @@ $secondary-title-font-size: 18px;
 	/*.completed-true .task-title {
 		text-decoration: line-through;
 	}*/
+}
+
+.dragged-task {
+	width: 35%;
+	text-align: left;
 }
 
 .checkbox {

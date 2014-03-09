@@ -32,6 +32,17 @@ $carousell-btn-width: 56px;
 	margin-right: $carousell-btn-width;
 }
 
+#projectsDrawer .drawer {
+		width: 100%;
+		position: relative;
+		top: $neg-tag-height;
+		background: $drawer-background-color;
+		overflow-y: hidden;
+		overflow-x: scroll;
+		-webkit-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+}
+
 #projectsDrawer {
 	position: fixed;
 	bottom: $neg-tag-height;
@@ -63,7 +74,8 @@ $carousell-btn-width: 56px;
 		background: $drawer-background-color;
 		overflow-y: hidden;
 		overflow-x: scroll;
-		@include transition(all 0.3s ease-in-out);
+		-webkit-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
 
 		&.open {
 			height: 400px;
@@ -74,22 +86,26 @@ $carousell-btn-width: 56px;
 		}
 	}
 	.project {
-		width: 350px;
-		margin-left: 20px;
+		width: 400px;
+		margin: 0 65px;
 		display: inline-block;
 		height: 100%;
 		vertical-align: top;
 		position: relative;
+		text-align: left;
+		.title {
+			margin: 40px 0;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 14px;
+		}
 	}
-	.taskList {
-		/*min-height: 200px;*/
-		position: absolute;
-		top: 48px + 2*24px;
-		bottom: 0;
-		width: 100%;
+	.projectTaskList {
+		height: 250px;
 		overflow-y: scroll;
 	}
 	.task {
-		border-bottom: 1px solid $drawer-text-color;
+		border-bottom: 1px solid #33394b;
+		text-align: left;
 	}
 }
