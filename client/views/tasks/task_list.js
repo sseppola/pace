@@ -17,7 +17,7 @@ Template.taskList.helpers({
 });
 
 Template.taskList.rendered = function () {
-	$('#taskList .task').droppable({
+	$('#taskList .taskDrop').droppable({
 		drop: function (event, ui) {
 			var id = Session.get('draggedTask'),
 				priority = null,
@@ -30,6 +30,8 @@ Template.taskList.rendered = function () {
 			else if ($target.hasClass('priority-3'))
 				priority = 3;
 			else if ($target.hasClass('priority-secondary'))
+				priority = 'secondary';
+			else if ($target.hasClass('secondary-title'))
 				priority = 'secondary';
 
 			if (priority) {

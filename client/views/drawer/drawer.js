@@ -25,7 +25,10 @@ Template.projectsDrawer.rendered = function () {
 			// console.log(this);
 			return $(this).clone().addClass('dragged-task');
 		},
-		appendTo: 'body'
+		appendTo: 'body',
+		cursorAt: {
+			top: 25
+		}
 
 	});
 };
