@@ -31,9 +31,9 @@ if (Tasks.find().count() === 0) {
 	});
 
 	Tasks.insert({
-		title: 'Make checkboxes',
-		priority: 1,
-		completed: true,
+		title: 'Style empty tasks',
+		priority: null,
+		completed: false,
 		accepted_date: PaceHelper.todayString(),
 		accepted_by: ssId,
 		created_date: new Date().getTime(),
@@ -43,9 +43,9 @@ if (Tasks.find().count() === 0) {
 	});
 
 	Tasks.insert({
-		title: 'Collapse secondary tasks',
-		priority: 2,
-		completed: true,
+		title: 'Enable drag & drop',
+		priority: null,
+		completed: false,
 		accepted_date: PaceHelper.todayString(),
 		accepted_by: ssId,
 		created_date: new Date().getTime(),

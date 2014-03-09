@@ -1,8 +1,16 @@
 Template.singleTask.helpers({
 	projectName: function () {
-		var id = this.projectId;
-		var project = Projects.findOne({_id: id});
-		return project.name;
+		var project = Projects.findOne({_id: this.projectId});
+		project = Projects.findOne({_id: this.projectId});
+
+		if (project == undefined)
+			// console.log("damn");
+		// return project.name;	
+	
+		// The problem here seems to be that project returns as undfined on the first call
+		// to the database. The id is right.
+		
+		return "Project Name";
 	}
 });
 

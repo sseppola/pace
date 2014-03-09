@@ -26,5 +26,24 @@ Meteor.methods({
 		Tasks.update(id, {
 			$set: {completed: state}
 		});
+	},
+	addTask: function(taskId, priority) {
+		var oldTask = Tasks.findOne({priority: priority, accepted_date: PaceHelper.todayString()});
+		// console.log(t);
+		if (oldTask) {
+			Tasks.update(oldTask._id, {
+				$set: {
+					priority: null,
+					accepted_date: null
+				}
+			});
+		}
+		
+		Tasks.update(taskId, {
+			$set: {
+				priority: priority,
+				accepted_date: PaceHelper.todayString()
+			}
+		});
 	}
 });

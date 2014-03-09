@@ -1,6 +1,14 @@
 // --------------------------------------
-// 		singleProjectTask template
+// 		projectTaskTemplate template
 // --------------------------------------
+
+Template.projectTaskTemplate.events({
+	'mousedown .task': function () {
+		console.log("mousedown");
+		Session.set('draggedTask', this._id);
+	}
+
+})
 
 
 // --------------------------------------
