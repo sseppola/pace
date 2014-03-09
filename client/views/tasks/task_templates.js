@@ -23,11 +23,8 @@ Template.singleTask.events({
 	'click .checkbox': function (e) {
 		e.preventDefault();
 
-		var $t = $(e.target);
+		var $t = $(e.target).parents('.task');
 		var newState = false;
-
-		if (!$t.hasClass('checkbox'))
-			$t = $t.parent();
 
 		if ($t.hasClass('completed-false'))
 			newState = true;

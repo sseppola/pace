@@ -1,6 +1,6 @@
 <template name="taskList">
 	<div id="taskList" class="exclBox">
-		<div class="task priority-1">
+		<div class="task priority-1 completed-{{p1.completed}}">
 			{{#if p1}}
 				{{> singleTask p1}}
 			{{else}}
@@ -8,7 +8,7 @@
 			{{/if}}
 		</div>
 
-		<div class="task priority-2">
+		<div class="task priority-2 completed-{{p2.completed}}">
 			{{#if p2}}
 				{{> singleTask p2}}
 			{{else}}
@@ -16,7 +16,7 @@
 			{{/if}}
 		</div>
 
-		<div class="task priority-3">
+		<div class="task priority-3 completed-{{p3.completed}}">
 			{{#if p3}}
 				{{> singleTask p3}}
 			{{else}}
@@ -29,7 +29,7 @@
 		</div>
 		
 		{{#each secondary}}
-			<div class="task priority-secondary">
+			<div class="task priority-secondary completed-{{completed}}">
 				{{> singleTask}}
 			</div>
 		{{/each}}

@@ -1,11 +1,14 @@
 <template name="singleTask">
 	<div class="wrapper">
-		<div class="checkbox clickable completed-{{completed}}" data-completed="{{ completed }}">
+		<div class="checkbox clickable">
 			{{#if completed}}
-				X
+				<img src="images/check_transparent.png" />
+				<div class="back"></div>
 			{{else}}
 				<div class="window">{{priority}}</div>
-				<div class="back">O</div>
+				<div class="back">
+					<img src="images/check_blank.png" />
+				</div>
 			{{/if}}
 		</div>
 		<div class="task-info">

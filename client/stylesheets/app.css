@@ -595,50 +595,70 @@ header {
 /* P2 */
 /* P3 */
 /* Secondary text color */
-/* line 25, ../sass/modules/_tasks.scss */
+/* line 27, ../sass/modules/_tasks.scss */
 #taskList {
   width: 95%;
   display: inline-block; }
-  /* line 28, ../sass/modules/_tasks.scss */
+  /* line 30, ../sass/modules/_tasks.scss */
   #taskList .wrapper {
     text-align: left;
     display: inline-block;
     width: 85%; }
 
-/* line 34, ../sass/modules/_tasks.scss */
+/* line 36, ../sass/modules/_tasks.scss */
 .task {
   width: 100%;
   border-bottom: 1px solid #e5e7ea;
   text-align: center;
-  position: relative; }
-  /* line 40, ../sass/modules/_tasks.scss */
+  position: relative;
+  /*.completed-true .task-title {
+  	text-decoration: line-through;
+  }*/ }
+  /* line 42, ../sass/modules/_tasks.scss */
   .task input {
     margin-right: 10px; }
 
-/* line 45, ../sass/modules/_tasks.scss */
+/* line 51, ../sass/modules/_tasks.scss */
 .checkbox {
   border: 3px solid black;
   border-radius: 3px;
+  position: relative;
   height: 21px;
   width: 21px;
   display: inline-block;
   overflow: hidden;
-  vertical-align: top; }
-  /* line 53, ../sass/modules/_tasks.scss */
+  vertical-align: top;
+  text-align: center;
+  font-weight: 300; }
+  /* line 62, ../sass/modules/_tasks.scss */
   .checkbox .window {
     width: 100%;
     height: 100%;
     color: #fff; }
-    /* line 57, ../sass/modules/_tasks.scss */
+    /* line 66, ../sass/modules/_tasks.scss */
     .checkbox .window:hover {
       opacity: 0; }
+  /* line 70, ../sass/modules/_tasks.scss */
+  .checkbox .back {
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+  /* line 75, ../sass/modules/_tasks.scss */
+  .checkbox img {
+    height: 100%;
+    width: 100%; }
+  /* line 79, ../sass/modules/_tasks.scss */
+  .checkbox img, .checkbox .window, .checkbox .back {
+    position: absolute;
+    top: 0;
+    left: 0; }
 
-/* line 63, ../sass/modules/_tasks.scss */
+/* line 86, ../sass/modules/_tasks.scss */
 .task-info {
   display: inline-block;
   vertical-align: top; }
 
-/* line 70, ../sass/modules/_tasks.scss */
+/* line 93, ../sass/modules/_tasks.scss */
 .task-project {
   font-size: 10px;
   line-height: 10px;
@@ -646,69 +666,91 @@ header {
   color: gray;
   letter-spacing: 2px; }
 
-/* line 78, ../sass/modules/_tasks.scss */
+/* line 102, ../sass/modules/_tasks.scss */
+.completed-true .task-title {
+  text-decoration: line-through; }
+/* line 105, ../sass/modules/_tasks.scss */
+.completed-true.priority-1 .back {
+  background: #e84f4f; }
+/* line 106, ../sass/modules/_tasks.scss */
+.completed-true.priority-2 .back {
+  background: #70bcc4; }
+/* line 107, ../sass/modules/_tasks.scss */
+.completed-true.priority-3 .back {
+  background: #fcb041; }
+/* line 108, ../sass/modules/_tasks.scss */
+.completed-true.priority-secondary .back {
+  background: #000; }
+
+/* line 111, ../sass/modules/_tasks.scss */
 .priority-1 {
   font-size: 48px;
   line-height: 48px; }
-  /* line 81, ../sass/modules/_tasks.scss */
+  /* line 114, ../sass/modules/_tasks.scss */
   .priority-1 .checkbox {
     border-color: #e84f4f;
     height: 74px;
     width: 74px;
-    margin: 53px 50px 53px 0; }
-  /* line 87, ../sass/modules/_tasks.scss */
+    margin: 53px 50px 53px 0;
+    font-size: 65px;
+    line-height: 74px; }
+  /* line 122, ../sass/modules/_tasks.scss */
   .priority-1 .window {
     background: #e84f4f; }
-  /* line 90, ../sass/modules/_tasks.scss */
+  /* line 125, ../sass/modules/_tasks.scss */
   .priority-1 .task-info {
     height: 74px;
     margin: 53px 0; }
 
-/* line 96, ../sass/modules/_tasks.scss */
+/* line 131, ../sass/modules/_tasks.scss */
 .priority-2 {
   font-size: 30px;
   line-height: 30px; }
-  /* line 99, ../sass/modules/_tasks.scss */
+  /* line 134, ../sass/modules/_tasks.scss */
   .priority-2 .checkbox {
     border-color: #70bcc4;
     width: 44px;
     height: 44px;
-    margin: 38px 80px 38px 0; }
-  /* line 105, ../sass/modules/_tasks.scss */
+    margin: 38px 80px 38px 0;
+    font-size: 34px;
+    line-height: 38px; }
+  /* line 142, ../sass/modules/_tasks.scss */
   .priority-2 .window {
     background: #70bcc4; }
-  /* line 108, ../sass/modules/_tasks.scss */
+  /* line 145, ../sass/modules/_tasks.scss */
   .priority-2 .task-info {
     height: 44px;
     margin: 38px 0; }
 
-/* line 114, ../sass/modules/_tasks.scss */
+/* line 151, ../sass/modules/_tasks.scss */
 .priority-3 {
   font-size: 30px; }
-  /* line 116, ../sass/modules/_tasks.scss */
+  /* line 153, ../sass/modules/_tasks.scss */
   .priority-3 .checkbox {
     border-color: #fcb041;
     width: 44px;
     height: 44px;
-    margin: 38px 80px 38px 0; }
-  /* line 122, ../sass/modules/_tasks.scss */
+    margin: 38px 80px 38px 0;
+    font-size: 34px;
+    line-height: 38px; }
+  /* line 161, ../sass/modules/_tasks.scss */
   .priority-3 .window {
     background: #fcb041; }
-  /* line 125, ../sass/modules/_tasks.scss */
+  /* line 164, ../sass/modules/_tasks.scss */
   .priority-3 .task-info {
     height: 44px;
     margin: 38px 0; }
 
-/* line 136, ../sass/modules/_tasks.scss */
+/* line 175, ../sass/modules/_tasks.scss */
 .priority-secondary .checkbox {
   margin: 33px 27px 33px 0;
   border-width: 1px;
   border-color: #9aa1b0; }
-/* line 141, ../sass/modules/_tasks.scss */
+/* line 180, ../sass/modules/_tasks.scss */
 .priority-secondary .task-info {
   margin: 23px 0; }
 
-/* line 146, ../sass/modules/_tasks.scss */
+/* line 185, ../sass/modules/_tasks.scss */
 .secondary-title {
   font-size: 18px;
   color: #5f6e8b;

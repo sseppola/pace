@@ -1,5 +1,7 @@
 /* Variables */
 
+$checkbox-border-thickness: 3px;
+
 /* P1 */
 $p1-vert-margin: 53px;
 $p1-font-size: 48px;
@@ -40,16 +42,23 @@ $secondary-title-font-size: 18px;
 	input {
 		margin-right: 10px;
 	}
+
+	/*.completed-true .task-title {
+		text-decoration: line-through;
+	}*/
 }
 
 .checkbox {
-	border: 3px solid black;
+	border: $checkbox-border-thickness solid black;
 	border-radius: 3px;
+	position: relative;
 	height: 21px;
 	width: 21px;
 	display: inline-block;
 	overflow: hidden;
 	vertical-align: top;
+	text-align: center;
+	font-weight: 300;
 	.window {
 		width: 100%;
 		height: 100%;
@@ -57,6 +66,20 @@ $secondary-title-font-size: 18px;
 		&:hover {
 			opacity: 0;
 		}
+	}
+	.back {
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+	img {
+		height: 100%;
+		width: 100%;
+	}
+	img, .window, .back {
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 }
 
@@ -75,6 +98,16 @@ $secondary-title-font-size: 18px;
 	letter-spacing: 2px;
 }
 
+.completed-true {
+	.task-title {
+		text-decoration: line-through;
+	}
+	&.priority-1 .back {background: $p1-color;}
+	&.priority-2 .back {background: $p2-color;}
+	&.priority-3 .back {background: $p3-color;}
+	&.priority-secondary .back {background: #000;}
+}
+
 .priority-1 {
 	font-size: $p1-font-size;
 	line-height: $p1-font-size;
@@ -83,6 +116,8 @@ $secondary-title-font-size: 18px;
 		height: $p1-height;
 		width: $p1-height;
 		margin: $p1-vert-margin 50px $p1-vert-margin 0;
+		font-size: 65px;
+		line-height: $p1-height;
 	}
 	.window {
 		background: $p1-color;
@@ -101,6 +136,8 @@ $secondary-title-font-size: 18px;
 		width: $p2-height;
 		height: $p2-height;
 		margin: $p2-vert-margin 80px $p2-vert-margin 0;
+		font-size: 34px;
+		line-height: $p2-height - 2*$checkbox-border-thickness;
 	}
 	.window {
 		background: $p2-color;
@@ -118,6 +155,8 @@ $secondary-title-font-size: 18px;
 		width: $p3-height;
 		height: $p3-height;
 		margin: $p3-vert-margin 80px $p3-vert-margin 0;
+		font-size: 34px;
+		line-height: $p3-height - 2*$checkbox-border-thickness;
 	}
 	.window {
 		background: $p3-color;
