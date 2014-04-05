@@ -1,9 +1,12 @@
 <template name="layout">
-{{> header }}
-{{> borderMenu }}
 
-<div id="main" class="exclBox">
-	{{> yield}}
-</div>
+	<div class="susy">
+		{{> header }}
+		{{> borderMenu }}
+
+		<div id="main" class="exclBox">
+			{{> yield}}
+		</div>
+	</div>
 
 </template>

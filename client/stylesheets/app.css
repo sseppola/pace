@@ -203,24 +203,74 @@ table {
   text-align: center;
   position: relative; }
 
-header {
-  height: 100px;
-  border-bottom: 1px solid black; }
-  header .wrapper {
+header, #header {
+  height: 98px;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 17px;
+  -webkit-transform-origin: left bottom;
+  -webkit-transition: all 0.3s; }
+  header .leftContainer, #header .leftContainer {
+    width: 20.75472%;
+    float: left;
+    margin-right: 1.88679%; }
+  header .centerContainer, #header .centerContainer {
+    width: 32.07547%;
+    float: left;
+    margin-right: 1.88679%;
+    margin-left: 11.32075%; }
+  header .rightContainer, #header .rightContainer {
+    width: 20.75472%;
+    float: right; }
+  header.hide, #header.hide {
+    -webkit-transform: translate(0, -98px); }
+  header .leftContainer, header .rightContainer, header .centerContainer, #header .leftContainer, #header .rightContainer, #header .centerContainer {
+    height: 98px; }
+  header .leftContainer, header .centerContainer, header .rightContainer, #header .leftContainer, #header .centerContainer, #header .rightContainer {
+    padding: 40px 0 41px 0;
+    height: 98px;
     position: relative;
-    text-align: center; }
-  header .logo {
-    position: absolute;
-    left: 0;
-    line-height: 100px; }
-  header .loginBtns {
-    position: absolute;
-    right: 150px;
-    top: 82px; }
-
-#dailyInfo {
-  display: inline-block;
-  height: 100px; }
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; }
+  header .leftContainer, #header .leftContainer {
+    text-align: left; }
+  header .centerContainer p, #header .centerContainer p {
+    margin: 0;
+    line-height: 12px; }
+  header .rightContainer, #header .rightContainer {
+    text-align: right; }
+  header #login-dropdown-list, #header #login-dropdown-list {
+    left: auto;
+    right: 0;
+    top: 20px; }
+  header progress, #header progress {
+    width: 100px;
+    height: 2px;
+    border: 0;
+    padding: 0;
+    background: #d0d7e4;
+    -webkit-appearance: none; }
+    header progress::-webkit-progress-bar, #header progress::-webkit-progress-bar {
+      background-color: #d0d7e4; }
+    header progress::-webkit-progress-value, #header progress::-webkit-progress-value {
+      background-color: #a8be37; }
+    header progress::-moz-progress-bar, #header progress::-moz-progress-bar {
+      background-color: #a8be37; }
+  header .vCenterBox, #header .vCenterBox {
+    height: 98px;
+    position: relative;
+    text-align: left; }
+  header #menuBtn, header #newTaskBtn, #header #menuBtn, #header #newTaskBtn {
+    vertical-align: top; }
+  header .login-link-text, header #newTaskBtn, #header .login-link-text, #header #newTaskBtn {
+    height: 17px;
+    line-height: 17px;
+    text-decoration: none; }
+  header #newTaskBtn, #header #newTaskBtn {
+    margin-left: 55px;
+    text-transform: uppercase; }
+  header #menu-btn-container, header #new-task-container, #header #menu-btn-container, #header #new-task-container {
+    display: inline-block; }
 
 /* Variables */
 /* P1 */
@@ -536,7 +586,7 @@ header {
   border-width: 0px;
   border-style: solid;
   border-color: #333333;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   transition: border-width 0.3s, background-color 0.3s, height 0s 0.3s; }
   .bt-menu.bt-menu-open {
     height: 100%;
@@ -582,4 +632,31 @@ header {
 
 body {
   font-family: "Proxima Nova";
-  color: #253659; }
+  color: #253659;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center; }
+
+.susy {
+  width: 95%;
+  display: inline-block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .susy::after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+.btn {
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  outline: none; }
+
+.menu-btn {
+  width: 24px;
+  height: 17px;
+  background: url("images/icon-menu.png"); }

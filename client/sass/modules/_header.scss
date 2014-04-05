@@ -1,25 +1,113 @@
-$header-height: 100px;
+$header-height: 98px;
 
-header {
+header, #header {
+	$map: layout(auto 9 1/5 outside fluid);
+	@include layout($map);
+
+	@include nested(9) {
+		.leftContainer {
+			@include span(2);
+		}
+		.centerContainer {
+			@include span(3);
+			@include pre(1);
+		}
+		.rightContainer {
+			@include span(last 2);
+		}
+	}
+
 	height: $header-height;
-	border-bottom: 1px solid black;
-	.wrapper {
+	box-sizing: border-box;
+	font-size: 12px;
+	line-height: 17px;
+
+	// Browser tags
+	-webkit-transform-origin: left bottom;
+	-webkit-transition: all $app-transition-time;
+
+	&.hide {
+		-webkit-transform: translate(0, -$header-height);
+	}
+
+
+	.leftContainer, .rightContainer, .centerContainer {
+		height: $header-height;
+	}
+	.leftContainer, .centerContainer, .rightContainer {
+		padding: 40px 0 41px 0;
+		height: $header-height;
 		position: relative;
-		text-align: center;
+
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
 	}
-	.logo {
-		position: absolute;
-		left: 0;
-		line-height: $header-height;
+	.leftContainer {
+		text-align: left;
 	}
-	.loginBtns {
-		position: absolute;
-		right: 150px;
-		top: 82px;
+	.centerContainer {
+		p {
+			margin: 0;
+			line-height: 12px;
+		} 
 	}
+	.rightContainer {
+		text-align: right;
+	}
+	
+	#login-dropdown-list {
+		left: auto;
+		right: 0;
+		top: 20px;
+	}	
+
+	$progress-color: $pace-green;
+	$progress-background: #d0d7e4;
+	progress {
+		width: 100px;
+		height: 2px;
+		border: 0;
+		padding: 0;
+		background: $progress-background;
+
+		-webkit-appearance: none;
+		&::-webkit-progress-bar {
+			background-color: $progress-background;
+		}
+		&::-webkit-progress-value {
+			background-color: $progress-color;
+		}
+		&::-moz-progress-bar {
+			background-color: $progress-color;
+		}
+
+
+	}
+
+	.vCenterBox {
+		
+		height: $header-height;
+		position: relative;
+		text-align: left;
+	}
+
+	#menuBtn, #newTaskBtn {
+		vertical-align: top;
+	}
+	.login-link-text, #newTaskBtn {
+		height: 17px;
+		line-height: 17px;
+		text-decoration: none;
+	}
+	#newTaskBtn {
+		margin-left: 55px;
+		text-transform: uppercase;
+	}
+	
+	#menu-btn-container, #new-task-container {
+		display: inline-block;
+
+	}
+
 }
 
-#dailyInfo {
-	display: inline-block;
-	height: $header-height;
-}

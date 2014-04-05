@@ -1,14 +1,22 @@
 <template name="header">
+
 	<header id="header">
-		<div class="wrapper">
-			<div class="logo clickable bt-menu-trigger">Pace</div>
-			<div id="dailyInfo">
-				<div>{{ displayDate }}</div>
-				<div>{{ estimatedRun }}</div>
-			</div>
-			<div class="loginBtns">
+		<div class="leftContainer">
+			<button type="button" id="menuBtn" class="btn menu-btn bt-menu-trigger"></button>
+			<button type="button" id="newTaskBtn" class="btn">+ New task</button>
+		</div>
+			
+			
+		<div class="centerContainer">
+			<p>{{ estimatedRun }}</p>
+			<progress value='{{ progress }}' max='1' min='0'></progress>
+		</div>
+			
+			<div class="rightContainer">
 				{{> loginButtons}}
 			</div>
-		</div>
+
+		<!-- </div> -->
 	</header>
+
 </template>

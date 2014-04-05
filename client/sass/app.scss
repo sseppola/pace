@@ -1,5 +1,7 @@
 
 @import "modules/_normalize.scss";
+@import "vendor/_susy.scss";
+
 @import "partials/_sindre.scss";
 
 // Vertical rythm plugin: http://atendesigngroup.com/blog/vertical-rhythm-compass
@@ -7,12 +9,21 @@
 
 $app-font: 'Proxima Nova';
 $app-text-color: #253659;
+$app-transition-time: 0.3s;
 
+$pace-green: #a8be37;
 
 // Projects drawer variables
 $drawer-text-color: #fff;
 $drawer-background-color: #252a3a;
 
+
+$susy: (
+	columns: 12,		// Number of columns in the grid
+	gutters: 1/4,		// The size of the gutter in relation to a single column
+	math: fluid,
+	output: float,
+);
 
 
 
@@ -25,4 +36,30 @@ $drawer-background-color: #252a3a;
 body {
 	font-family: $app-font;
 	color: $app-text-color;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	text-align: center;
+}
+
+
+.susy {
+	width: 95%;
+	display: inline-block;
+	@include container();
+}
+
+
+
+.btn {
+	-webkit-appearance: none;
+	background: transparent;
+	border: 0;
+	padding: 0;
+	outline: none;
+}
+.menu-btn {
+	width: 24px;
+	height: 17px;
+	background: url('images/icon-menu.png');
 }

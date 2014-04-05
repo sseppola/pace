@@ -1,29 +1,35 @@
 Template.header.helpers({
-	displayDate: function () {
-		var d = new Date();
-		return PaceHelper.dayOfWeek() + " " + d.getDate() + ". " + PaceHelper.monthName();
-	},
 	estimatedRun: function () {
 		var tasks = Tasks.find({accepted_date: PaceHelper.todayString()}).fetch();
 		var time = 0;
+
+		// timeEstimate is in minutes
 		for (var i=0; i < tasks.length; i++) {
 			time += tasks[i].timeEstimate;
 		}
-		
-		var min = PaceHelper.pluralize(time % 60, "Minute"),
-			hrs = PaceHelper.pluralize(time / 60, "Hour");
-		
-		if (hrs !== "" && min !== "")
-			return hrs + " and " + min + " of work esitmated";
-		else if (hrs !== "" && min === "")
-			return hrs + " of work estimated";
-		else if (hrs === "" && min !== "")
-			return min + " of work estimated";
-		else 
-			return "No work planned yet";
+		time = 68;
+		var timeUntil;
+
+		if (time == 0) {
+			timeUntil = 'Nothing planned';
+		} else if (time < 60) {
+			timeUntil = Math.round(moment.duration(time, 'm').asMinutes() * 10)/10;
+			timeUntil += ' Minutes left';
+		} else {
+			timeUntil = Math.round(moment.duration(time, 'm').asHours() * 10)/10;
+			timeUntil += ' Hours left';
+		}
+		 
+		return timeUntil;
+	},
+	progress: function () {
+		return 0.25;
 	}
 });
 
 Template.header.events({
-	'click .bt-menu-trigger': PaceHelper.openBorderMenu
+	'click .bt-menu-trigger': PaceHelper.openBorderMenu,
+	'click #newTaskBtn': function () {
+		console.log("Creating new task");
+	}
 });
