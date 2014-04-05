@@ -1,5 +1,5 @@
 <template name="taskList">
-	<div id="taskList" class="exclBox">
+	<div id="taskList">
 		<!-- This can be improved by creating a custom handlebars block helper  -->
 		<div class="task priority-1 completed-{{p1.completed}} taskDrop">
 			{{#if p1}}
@@ -25,7 +25,7 @@
 			{{/if}}
 		</div>
 		
-		<div class="wrapper secondary-title taskDrop">
+		<div class="secondary-title taskDrop">
 			{{n_secondary}} secondary tasks:
 		</div>
 		

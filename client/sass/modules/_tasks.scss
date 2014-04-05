@@ -3,18 +3,21 @@
 $checkbox-border-thickness: 3px;
 
 /* P1 */
-$p1-vert-margin: 53px;
+$p1-vertical-padding: 50px;
+$p1-vert-margin: 0;
 $p1-font-size: 48px;
 $p1-height: 74px;
 $p1-color: #e84f4f;
 
 /* P2 */
+$p2-vertical-padding: 40px;
 $p2-vert-margin: 38px;
 $p2-font-size: 30px;
 $p2-height: 44px;
 $p2-color: #70bcc4;
 
 /* P3 */
+$p3-vertical-padding: $p2-vertical-padding;
 $p3-vert-margin: $p2-vert-margin;
 $p3-font-size: $p2-font-size;
 $p3-height: $p2-height;
@@ -23,28 +26,56 @@ $p3-color: #fcb041;
 /* Secondary text color */
 $secondary-title-color: #5f6e8b;
 $secondary-title-font-size: 18px;
+$secondary-vertical-padding: 34px;
 
 #taskList {
-	width: 95%;
-	display: inline-block;
-	.wrapper { 					// this will apply to the text in the tasks
-		text-align: left;
-		display: inline-block;
-		width: 85%;
+	$map: layout(auto 14 1/4 outside fluid);
+	@include layout($map);
+
+	@include nested(14) {
+		.checkboxContainer {
+			@include span(2);
+			@include pre(1);
+		}
+		.task-info {
+			@include span(8);
+		}
+		.priority-secondary {
+			.checkboxContainer {
+				@include span(1);
+				@include pre(1);
+			}
+			.task-info {
+				@include span(9);
+			}	
+		}
+		.action-mode {
+			@include span(last 2);
+			@include post(1);
+		}
+		.secondary-title {
+			@include pre(1);
+			@include span(12);
+			@include post(1);
+		}
+		.floatBreak {
+			@include break;
+		}
 	}
+
+	text-align: left;
+	overflow-x: hidden;
 	.emptyTask {
-		margin: 20px 0;
+		// margin: 20px 0;
 	}
 }
 .task {
-	width: 100%;
-	border-bottom: 1px solid #e5e7ea;
-	text-align: center;
+	border-bottom: 2px solid #e5e7ea;
 	position: relative;
 	
-	input {
-		margin-right: 10px;
-	}
+	// input {
+	// 	margin-right: 10px;
+	// }
 
 	/*.completed-true .task-title {
 		text-decoration: line-through;
@@ -106,6 +137,21 @@ $secondary-title-font-size: 18px;
 	letter-spacing: 2px;
 }
 
+.action-mode {
+	p {
+		display: inline-block;
+		font-size: 12px;
+		line-height: 20px;
+		padding: 20px 0;
+		vertical-align: top;
+		margin: 0;
+	}
+	.action-btn {
+		display: inline-block;
+		// margin-right: 24px;
+	}
+}
+
 .completed-true {
 	.task-title {
 		text-decoration: line-through;
@@ -119,11 +165,12 @@ $secondary-title-font-size: 18px;
 .priority-1 {
 	font-size: $p1-font-size;
 	line-height: $p1-font-size;
+	padding: $p1-vertical-padding 0;
 	.checkbox {
 		border-color: $p1-color;
 		height: $p1-height;
 		width: $p1-height;
-		margin: $p1-vert-margin 50px $p1-vert-margin 0;
+		// margin: $p1-vert-margin 50px $p1-vert-margin 0;
 		font-size: 65px;
 		line-height: $p1-height;
 	}
@@ -131,19 +178,20 @@ $secondary-title-font-size: 18px;
 		background: $p1-color;
 	}
 	.task-info {
-		height: $p1-height;
-		margin: $p1-vert-margin 0;
+		// height: $p1-height;
+		// margin: $p1-vert-margin 0;
 	}
 }
 
 .priority-2 {
 	font-size: $p2-font-size;
 	line-height: $p2-font-size;
+	padding: $p2-vertical-padding 0;
 	.checkbox {
 		border-color: $p2-color;
 		width: $p2-height;
 		height: $p2-height;
-		margin: $p2-vert-margin 80px $p2-vert-margin 0;
+		// margin: $p2-vert-margin 80px $p2-vert-margin 0;
 		font-size: 34px;
 		line-height: $p2-height - 2*$checkbox-border-thickness;
 	}
@@ -151,18 +199,19 @@ $secondary-title-font-size: 18px;
 		background: $p2-color;
 	}
 	.task-info {
-		height: $p2-height;
-		margin: $p2-vert-margin 0;
+		// height: $p2-height;
+		// margin: $p2-vert-margin 0;
 	}
 }
 
 .priority-3 {
 	font-size: $p3-font-size;
+	padding: $p3-vertical-padding 0;
 	.checkbox {
 		border-color: $p3-color;
 		width: $p3-height;
 		height: $p3-height;
-		margin: $p3-vert-margin 80px $p3-vert-margin 0;
+		// margin: $p3-vert-margin 80px $p3-vert-margin 0;
 		font-size: 34px;
 		line-height: $p3-height - 2*$checkbox-border-thickness;
 	}
@@ -170,8 +219,8 @@ $secondary-title-font-size: 18px;
 		background: $p3-color;
 	}
 	.task-info {
-		height: $p3-height;
-		margin: $p3-vert-margin 0;
+		// height: $p3-height;
+		// margin: $p3-vert-margin 0;
 	}
 }
 
@@ -180,13 +229,28 @@ $secondary-color: #9aa1b0;
 $secondary-vert-margin: 33px;
 
 .priority-secondary {
+	padding: $secondary-vertical-padding 0;
 	.checkbox {
-		margin: $secondary-vert-margin 27px $secondary-vert-margin 0;
 		border-width: 1px;
 		border-color: $secondary-color;
 	}
+	.action-mode {
+		margin-top: -10px;
+		overflow: visible;
+		p {
+			padding: 10px 0;
+		}
+		.action-btn {
+			height: 40px;
+			// padding: 0 10px;
+			background-size: 40px 40px;
+			background-position: 10px 0; 
+			background-repeat: no-repeat;
+			overflow: visible;
+		}
+	}
 	.task-info {
-		margin: ($secondary-vert-margin - 10px) 0;
+		// margin: ($secondary-vert-margin - 10px) 0;
 	}
 }
 

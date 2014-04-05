@@ -44,7 +44,7 @@ if (Tasks.find().count() === 0) {
 
 	Tasks.insert({
 		title: 'Enable drag & drop',
-		priority: null,
+		priority: 3,
 		completed: false,
 		accepted_date: null,
 		accepted_by: ssId,
@@ -56,7 +56,7 @@ if (Tasks.find().count() === 0) {
 
 	Tasks.insert({
 		title: 'Make app display empty slots when tasks are missing',
-		priority: null,
+		priority: 1,
 		completed: false,
 		accepted_date: null,
 		accepted_by: ssId,
@@ -68,7 +68,7 @@ if (Tasks.find().count() === 0) {
 
 	Tasks.insert({
 		title: 'Create object that contains today\'s tasks',
-		priority: null,
+		priority: 2,
 		completed: false,
 		accepted_date: null,
 		accepted_by: ssId,

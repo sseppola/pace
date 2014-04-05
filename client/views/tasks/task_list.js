@@ -1,18 +1,18 @@
 Template.taskList.helpers({
 	p1: function () {
-		return Tasks.findOne({priority: 1, accepted_date: PaceHelper.todayString()});
+		return Tasks.findOne({priority: 1});
 	},
 	p2: function () {
-		return Tasks.findOne({priority: 2, accepted_date: PaceHelper.todayString()});
+		return Tasks.findOne({priority: 2});
 	},
 	p3: function () {
-		return Tasks.findOne({priority: 3, accepted_date: PaceHelper.todayString()});
+		return Tasks.findOne({priority: 3});
 	},
 	secondary: function () {
-		return Tasks.find({priority: null, accepted_date: PaceHelper.todayString()});
+		return Tasks.find({priority: null});
 	},
 	n_secondary: function () {
-		return Tasks.find({priority: null, accepted_date: PaceHelper.todayString()}).count();
+		return Tasks.find({priority: null}).count();
 	}
 });
 

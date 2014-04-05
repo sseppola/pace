@@ -278,25 +278,45 @@ header, #header {
 /* P3 */
 /* Secondary text color */
 #taskList {
-  width: 95%;
-  display: inline-block; }
-  #taskList .wrapper {
-    text-align: left;
-    display: inline-block;
-    width: 85%; }
-  #taskList .emptyTask {
-    margin: 20px 0; }
+  text-align: left;
+  overflow-x: hidden; }
+  #taskList .checkboxContainer {
+    width: 13.04348%;
+    float: left;
+    margin-right: 1.44928%;
+    margin-left: 7.24638%; }
+  #taskList .task-info {
+    width: 56.52174%;
+    float: left;
+    margin-right: 1.44928%; }
+  #taskList .priority-secondary .checkboxContainer {
+    width: 5.7971%;
+    float: left;
+    margin-right: 1.44928%;
+    margin-left: 7.24638%; }
+  #taskList .priority-secondary .task-info {
+    width: 63.76812%;
+    float: left;
+    margin-right: 1.44928%; }
+  #taskList .action-mode {
+    width: 13.04348%;
+    float: right;
+    margin-right: 7.24638%; }
+  #taskList .secondary-title {
+    margin-left: 7.24638%;
+    width: 85.50725%;
+    float: left;
+    margin-right: 1.44928%;
+    margin-right: 7.24638%; }
+  #taskList .floatBreak {
+    clear: both; }
 
 .task {
-  width: 100%;
-  border-bottom: 1px solid #e5e7ea;
-  text-align: center;
+  border-bottom: 2px solid #e5e7ea;
   position: relative;
   /*.completed-true .task-title {
   	text-decoration: line-through;
   }*/ }
-  .task input {
-    margin-right: 10px; }
 
 .dragged-task {
   width: 35%;
@@ -342,6 +362,16 @@ header, #header {
   color: gray;
   letter-spacing: 2px; }
 
+.action-mode p {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 20px 0;
+  vertical-align: top;
+  margin: 0; }
+.action-mode .action-btn {
+  display: inline-block; }
+
 .completed-true .task-title {
   text-decoration: line-through; }
 .completed-true.priority-1 .back {
@@ -355,57 +385,58 @@ header, #header {
 
 .priority-1 {
   font-size: 48px;
-  line-height: 48px; }
+  line-height: 48px;
+  padding: 50px 0; }
   .priority-1 .checkbox {
     border-color: #e84f4f;
     height: 74px;
     width: 74px;
-    margin: 53px 50px 53px 0;
     font-size: 65px;
     line-height: 74px; }
   .priority-1 .window {
     background: #e84f4f; }
-  .priority-1 .task-info {
-    height: 74px;
-    margin: 53px 0; }
 
 .priority-2 {
   font-size: 30px;
-  line-height: 30px; }
+  line-height: 30px;
+  padding: 40px 0; }
   .priority-2 .checkbox {
     border-color: #70bcc4;
     width: 44px;
     height: 44px;
-    margin: 38px 80px 38px 0;
     font-size: 34px;
     line-height: 38px; }
   .priority-2 .window {
     background: #70bcc4; }
-  .priority-2 .task-info {
-    height: 44px;
-    margin: 38px 0; }
 
 .priority-3 {
-  font-size: 30px; }
+  font-size: 30px;
+  padding: 40px 0; }
   .priority-3 .checkbox {
     border-color: #fcb041;
     width: 44px;
     height: 44px;
-    margin: 38px 80px 38px 0;
     font-size: 34px;
     line-height: 38px; }
   .priority-3 .window {
     background: #fcb041; }
-  .priority-3 .task-info {
-    height: 44px;
-    margin: 38px 0; }
 
-.priority-secondary .checkbox {
-  margin: 33px 27px 33px 0;
-  border-width: 1px;
-  border-color: #9aa1b0; }
-.priority-secondary .task-info {
-  margin: 23px 0; }
+.priority-secondary {
+  padding: 34px 0; }
+  .priority-secondary .checkbox {
+    border-width: 1px;
+    border-color: #9aa1b0; }
+  .priority-secondary .action-mode {
+    margin-top: -10px;
+    overflow: visible; }
+    .priority-secondary .action-mode p {
+      padding: 10px 0; }
+    .priority-secondary .action-mode .action-btn {
+      height: 40px;
+      background-size: 40px 40px;
+      background-position: 10px 0;
+      background-repeat: no-repeat;
+      overflow: visible; }
 
 .secondary-title {
   font-size: 18px;
@@ -660,3 +691,8 @@ body {
   width: 24px;
   height: 17px;
   background: url("images/icon-menu.png"); }
+
+.action-btn {
+  width: 60px;
+  height: 60px;
+  background: url("images/action-btn.png"); }

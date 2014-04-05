@@ -5,6 +5,9 @@ Template.singleTask.helpers({
 
 		// Important when db is not ready
 		return project && project.name;
+	},
+	remainingEstimate: function () {
+		return "30m estimated";
 	}
 });
 
