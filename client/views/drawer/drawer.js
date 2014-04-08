@@ -19,17 +19,4 @@ Template.projectsDrawer.rendered = function () {
 		Session.set('drawerState', 'closed');
 
 	$('.drawer').removeClass('open closed').addClass(Session.get('drawerState'));
-
-
-	$('#projectsDrawer .task').draggable({ 
-		helper: function () {
-			// console.log(this);
-			return $(this).clone().addClass('dragged-task');
-		},
-		appendTo: 'body',
-		cursorAt: {
-			top: 25
-		}
-
-	});
 };

@@ -19,6 +19,18 @@ Template.projectTemplate.helpers({
 	}
 });
 
+Template.projectTemplate.rendered = function () {
+	console.log($('#projectsDrawer .task').length);
+	$('#projectsDrawer .task').draggable({ 
+		helper: function () {
+			return $(this).clone().addClass('dragged-task');
+		},
+		appendTo: 'body',
+		cursorAt: {
+			top: 25
+		}
+	});
+}
 
 // --------------------------------------
 // 		New Project Template

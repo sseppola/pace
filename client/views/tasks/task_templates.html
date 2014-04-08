@@ -1,5 +1,5 @@
 <template name="singleTask">
-	<!-- <div class="wrapper"> -->
+		
 		<div class="checkboxContainer">
 			<div class="checkbox clickable">
 				{{#if completed}}
@@ -13,22 +13,26 @@
 				{{/if}}
 			</div>
 		</div>
+
 		<div class="task-info">
 			<div class="task-title">{{title}}</div>
 			<div class="task-project">{{projectName}}</div>
 		</div>
+
 		<div class="action-mode">
 			<div class="action-btn"></div>
 			<p>{{ remainingEstimate }}</p>
 		</div>
+
 		<div class="floatBreak"></div>
-	<!-- </div> -->
-	<!-- <input type="checkbox" {{#if completed}}checked{{/if}} /><span>{{title}}</span> -->
+
 </template>
 
 
 <template name="emptyTask">
+
 	<div class="emptyTask">
 		Drag task here
 	</div>
+	
 </template>

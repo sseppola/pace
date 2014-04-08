@@ -3,7 +3,9 @@
 // --------------------------------------
 
 Template.projectTaskTemplate.events({
-	'mousedown .task': function () {
+	'mousedown .task': function (e) {
+		console.log(e);
+		console.log("task id: " + this._id);
 		Session.set('draggedTask', this._id);
 	}
 });
