@@ -1,18 +1,18 @@
+
+
 Template.taskList.helpers({
-	p1: function () {
-		return Tasks.findOne({priority: 1});
-	},
-	p2: function () {
-		return Tasks.findOne({priority: 2});
-	},
-	p3: function () {
-		return Tasks.findOne({priority: 3});
-	},
-	secondary: function () {
-		return Tasks.find({priority: null});
+	tasks: function () {
+		var startOfDay = new Date().setHours(0,0,0,0);
+		var endOfDay = new Date().setHours(23,59,59,999);
+		return {
+			p1: Tasks.findOne({priority: 1, accepted_time: {$gte: startOfDay, $lt: endOfDay} }),
+			p2: Tasks.findOne({priority: 2, accepted_time: {$gte: startOfDay, $lt: endOfDay} }),
+			p3: Tasks.findOne({priority: 3, accepted_time: {$gte: startOfDay, $lt: endOfDay} }),
+			secondary: Tasks.find({priority: null, accepted_time: {$gte: startOfDay, $lt: endOfDay} })
+		}
 	},
 	n_secondary: function () {
-		return Tasks.find({priority: null}).count();
+		return Tasks.find({priority: null, accepted_time: {$gte: Template.taskList.start, $lt: Template.taskList.end} }).count();
 	}
 });
 

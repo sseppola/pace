@@ -1,25 +1,26 @@
 <template name="taskList">
 	<div id="taskList">
+		<!-- <h2>{{ tasks.p2 }}</h2> -->
 		<!-- This can be improved by creating a custom handlebars block helper  -->
-		<div class="task priority-1 completed-{{p1.completed}} taskDrop">
-			{{#if p1}}
-				{{> singleTask p1}}
+		<div class="task priority-1 completed-{{tasks.p1.completed}} taskDrop">
+			{{#if tasks.p1}}
+				{{> singleTask tasks.p1}}
 			{{else}}
 				{{> emptyTask }}
 			{{/if}}
 		</div>
 
-		<div class="task priority-2 completed-{{p2.completed}} taskDrop">
-			{{#if p2}}
-				{{> singleTask p2}}
+		<div class="task priority-2 completed-{{tasks.p2.completed}} taskDrop">
+			{{#if tasks.p2}}
+				{{> singleTask tasks.p2}}
 			{{else}}
 				{{> emptyTask }}
 			{{/if}}
 		</div>
 
-		<div class="task priority-3 completed-{{p3.completed}} taskDrop">
-			{{#if p3}}
-				{{> singleTask p3}}
+		<div class="task priority-3 completed-{{tasks.p3.completed}} taskDrop">
+			{{#if tasks.p3}}
+				{{> singleTask tasks.p3}}
 			{{else}}
 				{{> emptyTask }}
 			{{/if}}
@@ -29,7 +30,7 @@
 			{{n_secondary}} secondary tasks:
 		</div>
 		
-		{{#each secondary}}
+		{{#each tasks.secondary}}
 			<div class="task priority-secondary completed-{{completed}} taskDrop">
 				{{> singleTask}}
 			</div>
