@@ -35,8 +35,6 @@ Meteor.methods({
 		var endOfDay = new Date().setHours(23,59,59,999);
 
 		if (priority != null) {
-			console.log("Attempting to remove old task, if any");
-
 			var oldTask = Tasks.findOne({priority: priority, accepted_time: {$gte: startOfDay, $lt: endOfDay} });
 
 			if (oldTask) {
@@ -49,8 +47,6 @@ Meteor.methods({
 			}	
 		}
 		
-		console.log("Updating dropped task with id: " + taskId + "  to priority: " + priority);
-
 		Tasks.update({ _id: taskId }, {
 			$set: {
 				priority: priority,
