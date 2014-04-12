@@ -17,6 +17,9 @@ Template.projectTaskTemplate.helpers({
 		if (this.priority)
 			priority = "p" + this.priority;
 
+		if (this.priority == 3)
+			console.log(this);
+
 		return priority;
 	}
 });

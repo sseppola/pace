@@ -31,24 +31,30 @@ Meteor.methods({
 		if (priority == 'secondary')
 			priority = null;
 
+		var startOfDay = new Date().setHours(0,0,0,0);
+		var endOfDay = new Date().setHours(23,59,59,999);
+
 		if (priority != null) {
-			var oldTask = Tasks.findOne({priority: priority, accepted_date: PaceHelper.todayString()});
+			console.log("Attempting to remove old task, if any");
+
+			var oldTask = Tasks.findOne({priority: priority, accepted_time: {$gte: startOfDay, $lt: endOfDay} });
 
 			if (oldTask) {
-				Tasks.update(oldTask._id, {
+				Tasks.update({ _id: oldTask._id }, {
 					$set: {
 						priority: null,
-						accepted_date: null
+						accepted_time: null
 					}
 				});
 			}	
 		}
 		
+		console.log("Updating dropped task with id: " + taskId + "  to priority: " + priority);
 
-		Tasks.update(taskId, {
+		Tasks.update({ _id: taskId }, {
 			$set: {
 				priority: priority,
-				accepted_date: PaceHelper.todayString()
+				accepted_time: new Date().getTime()
 			}
 		});
 	}

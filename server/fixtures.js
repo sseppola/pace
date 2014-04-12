@@ -32,9 +32,9 @@ if (Tasks.find().count() === 0) {
 
 	Tasks.insert({
 		title: 'Style empty tasks',
-		priority: null,
+		priority: 2,
 		completed: false,
-		accepted_time: null,
+		accepted_time: new Date().getTime(),
 		accepted_by: ssId,
 		created_date: new Date().getTime(),
 		projectId: paceId,

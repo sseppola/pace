@@ -1,8 +1,7 @@
 <template name="taskList">
 	<div id="taskList">
-		<!-- <h2>{{ tasks.p2 }}</h2> -->
 		<!-- This can be improved by creating a custom handlebars block helper  -->
-		<div class="task priority-1 completed-{{tasks.p1.completed}} taskDrop">
+		<div data-priority="1" class="task priority-1 completed-{{tasks.p1.completed}} taskDrop">
 			{{#if tasks.p1}}
 				{{> singleTask tasks.p1}}
 			{{else}}
@@ -10,7 +9,7 @@
 			{{/if}}
 		</div>
 
-		<div class="task priority-2 completed-{{tasks.p2.completed}} taskDrop">
+		<div data-priority="2" class="task priority-2 completed-{{tasks.p2.completed}} taskDrop">
 			{{#if tasks.p2}}
 				{{> singleTask tasks.p2}}
 			{{else}}
@@ -18,7 +17,7 @@
 			{{/if}}
 		</div>
 
-		<div class="task priority-3 completed-{{tasks.p3.completed}} taskDrop">
+		<div data-priority="3" class="task priority-3 completed-{{tasks.p3.completed}} taskDrop">
 			{{#if tasks.p3}}
 				{{> singleTask tasks.p3}}
 			{{else}}
@@ -26,12 +25,12 @@
 			{{/if}}
 		</div>
 		
-		<div class="secondary-title taskDrop">
-			{{n_secondary}} secondary tasks:
+		<div data-priority="secondary" class="secondary-title taskDrop">
+			{{tasks.number_of_secondary}} secondary tasks:
 		</div>
 		
 		{{#each tasks.secondary}}
-			<div class="task priority-secondary completed-{{completed}} taskDrop">
+			<div data-priority="secondary" class="task priority-secondary completed-{{completed}} taskDrop">
 				{{> singleTask}}
 			</div>
 		{{/each}}
