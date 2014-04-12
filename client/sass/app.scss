@@ -1,6 +1,8 @@
 
 @import "modules/_normalize.scss";
+@import "vendor/_breakpoint.scss";
 @import "vendor/_susy.scss";
+@import "vendor/bourbon/_bourbon.scss";
 
 @import "partials/_sindre.scss";
 
