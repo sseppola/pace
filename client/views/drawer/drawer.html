@@ -1,6 +1,6 @@
 <template name="drawer">
 	
-	<div id="projectsDrawer">
+	<div id="projectsDrawer" class="{{ edgeCase }}">
 		<div class="exclBox">
 			<div class="tag clickable">^</div>
 		</div>
@@ -14,14 +14,14 @@
 			</div>
 		</div>
 
-		<div id="drawerLeftBtn" class="drawerNav">
-			<button type="button" class="btn left-arrow" id="scrollLeftBtn"></button>
+		<div id="drawerLeftBtnContainer" class="drawerNav">
+			<button type="button" class="btn left-arrow" id="drawerLeftBtn"></button>
 		</div>
-		<div id="drawerRightBtn" class="drawerNav">
-			<button type="button" class="btn right-arrow" id="scrollRightBtn"></button>
+		<div id="drawerRightBtnContainer" class="drawerNav">
+			<button type="button" class="btn right-arrow" id="drawerRightBtn"></button>
 		</div>
 
-		<div id="projectList">
+		<div id="projectList" data-page="{{ page }}">
 			{{#each projects}}
 				{{> projectTemplate }}
 			{{/each}}

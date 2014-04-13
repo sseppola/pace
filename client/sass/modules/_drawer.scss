@@ -72,6 +72,17 @@ $project-max-width: 650px;
 		border-top-left-radius: 3px;
 		border-top-right-radius: 3px;
 	}
+
+	&.noLeft {
+		#drawerLeftBtn {
+			display: none;
+		}
+	}
+	&.noRight {
+		#drawerRightBtn {
+			display: none;
+		}
+	}
 }
 
 #drawerMenu {
@@ -116,11 +127,11 @@ $project-max-width: 650px;
 	}
 }
 
-#drawerLeftBtn {
+#drawerLeftBtnContainer {
 	left: $drawer-menu-width;
 }
 
-#drawerRightBtn {
+#drawerRightBtnContainer {
 	right: 0;
 }
 
@@ -133,11 +144,6 @@ $project-max-width: 650px;
 	@include box-sizing(border-box);
 	margin: $drawer-vertical-margin 0;
 	overflow: hidden;
-	text-align: center;
-
-	$map3: layout(auto 3 1/4 outside fluid);
-	$map2: layout(auto 2 1/4 outside fluid);
-	$map1: layout(auto 10 1/4 outside fluid);
 
 	$break1: 1070px;
 	$break1-pre: $break1 - 1px;
@@ -145,50 +151,10 @@ $project-max-width: 650px;
 	$break2-pre: $break2 - 1px;
 
 	$small: 0px $break1-pre;
-	@include susy-breakpoint($small, $map1) {
-		
-		.project {
-			@include span(8);
-			@include pre(1);
-			@include post(1);
-		}
-	}
-
-	$medium: $break1 $break2-pre;
-	@include susy-breakpoint($medium, $map2) {
-		
-		.project {
-			@include span(1);
-		}
-		.project:nth-child(2) {
-			@include span(last 1);
-			@include last;
-		}
-	}
-	$large: $break2;
-	@include susy-breakpoint($break2, $map3) {
-		
-		.project {
-			@include span(1);
-		}
-		.project:nth-child(3) {
-			@include span(last 1);
-			@include last;
-		}
-	}
-
 	
-
-	// @include layout($map);
-
-	// @include nested(14) {
-
-
-	// }
-
 	.project {
-		// width: 400px;
-		// margin: 0 65px;
+		min-width: 400px;
+		margin: 0 65px;
 		display: inline-block;
 		height: 100%;
 		vertical-align: top;
@@ -202,10 +168,13 @@ $project-max-width: 650px;
 			font-weight: 700;
 			font-size: 14px;
 		}
-	}
 
-	.hideL {
-		@include position(absolute, 0 null null (-1.5*$project-max-width))
+		&.hideR {
+			@include position(absolute, 0 (-1.5*$project-max-width) null null);
+		}
+		&.hideL {
+			@include position(absolute, 0 null null (-1.5*$project-max-width));	
+		}
 	}
 
 	.projectTaskList {

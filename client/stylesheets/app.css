@@ -463,6 +463,10 @@ header, #header {
     width: 42px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
+  #projectsDrawer.noLeft #drawerLeftBtn {
+    display: none; }
+  #projectsDrawer.noRight #drawerRightBtn {
+    display: none; }
 
 #drawerMenu {
   background: #1d202a;
@@ -500,10 +504,10 @@ header, #header {
     background-position: center;
     background-repeat: no-repeat; }
 
-#drawerLeftBtn {
+#drawerLeftBtnContainer {
   left: 56px; }
 
-#drawerRightBtn {
+#drawerRightBtnContainer {
   right: 0; }
 
 #projectList {
@@ -516,36 +520,10 @@ header, #header {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 40px 0;
-  overflow: hidden;
-  text-align: center; }
-  @media (min-width: 0px) and (max-width: 1069px) {
-    #projectList .project {
-      width: 79.59184%;
-      float: left;
-      margin-right: 2.04082%;
-      margin-left: 10.20408%;
-      margin-right: 10.20408%; } }
-  @media (min-width: 1070px) and (max-width: 1569px) {
-    #projectList .project {
-      width: 44.44444%;
-      float: left;
-      margin-right: 11.11111%; }
-    #projectList .project:nth-child(2) {
-      width: 44.44444%;
-      float: right;
-      float: right;
-      margin-right: 0; } }
-  @media (min-width: 1570px) {
-    #projectList .project {
-      width: 28.57143%;
-      float: left;
-      margin-right: 7.14286%; }
-    #projectList .project:nth-child(3) {
-      width: 28.57143%;
-      float: right;
-      float: right;
-      margin-right: 0; } }
+  overflow: hidden; }
   #projectList .project {
+    min-width: 400px;
+    margin: 0 65px;
     display: inline-block;
     height: 100%;
     vertical-align: top;
@@ -559,10 +537,14 @@ header, #header {
       text-transform: uppercase;
       font-weight: 700;
       font-size: 14px; }
-  #projectList .hideL {
-    position: absolute;
-    top: 0;
-    left: -975px; }
+    #projectList .project.hideR {
+      position: absolute;
+      top: 0;
+      right: -975px; }
+    #projectList .project.hideL {
+      position: absolute;
+      top: 0;
+      left: -975px; }
   #projectList .projectTaskList {
     height: 250px;
     overflow-y: scroll; }
