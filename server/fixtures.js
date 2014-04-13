@@ -30,6 +30,26 @@ if (Tasks.find().count() === 0) {
 		]
 	});
 
+	Projects.insert({
+		name: 'Test',
+		date_created: new Date().getTime(),
+		owner: ssId,
+		members: [
+			ssId,
+			snId
+		]
+	});
+
+	Projects.insert({
+		name: 'Test2',
+		date_created: new Date().getTime(),
+		owner: ssId,
+		members: [
+			ssId,
+			snId
+		]
+	});
+
 	Tasks.insert({
 		title: 'Redo drawer in susy',
 		priority: 1,

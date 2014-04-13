@@ -2,11 +2,11 @@
 // 		Project List
 // --------------------------------------
 
-Template.projectList.helpers({
-	projects: function () {
-		return Projects.find({});
-	}
-});
+// Template.projectList.helpers({
+// 	projects: function () {
+// 		return Projects.find({});
+// 	}
+// });
 
 
 // --------------------------------------

@@ -1,4 +1,4 @@
-Template.projectsDrawer.events({
+Template.drawer.events({
 	'click .tag': function () {
 		var $d = $('.drawer');
 		if ($d.hasClass('open')) {
@@ -13,7 +13,15 @@ Template.projectsDrawer.events({
 	}
 });
 
-Template.projectsDrawer.rendered = function () {
+Template.drawer.helpers({
+	projects: function () {
+		var projects = Projects.find({});
+		console.log(projects);
+		return projects;
+	}
+});
+
+Template.drawer.rendered = function () {
 	var state = Session.get('drawerState');
 	if (!state)
 		Session.set('drawerState', 'closed');

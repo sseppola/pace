@@ -34,12 +34,14 @@ $susy: (
 @import "modules/_drawer.scss";
 @import "modules/_borderMenu.scss";
 
+html, body {
+	width: 100%;
+	height: 100%;
+}
 
 body {
 	font-family: $app-font;
 	color: $app-text-color;
-	width: 100%;
-	height: 100%;
 	position: relative;
 	text-align: center;
 }
@@ -59,14 +61,36 @@ body {
 	border: 0;
 	padding: 0;
 	outline: none;
+	color: inherit;
+	background-repeat: no-repeat;
+
+	&.menu-btn {
+		width: 24px;
+		height: 17px;
+		background: url('images/icon-menu.png');
+	}
+	&.action-btn {
+		width: 60px;
+		height: 60px;
+		background: url('images/action-btn.png');
+	}
+	&.more-btn {
+		width: 25px;
+		height: 25px;
+		background: url('images/icon-more.png');
+	}
+	&.left-arrow {
+		width: 30px;
+		height: 30px;
+		background: url('images/icon-arrow.png');
+		@include transform(scaleX(-1));
+	    filter: FlipH;
+	    -ms-filter: "FlipH";
+	}
+	&.right-arrow {
+		width: 30px;
+		height: 30px;
+		background: url('images/icon-arrow.png');
+	}
 }
-.menu-btn {
-	width: 24px;
-	height: 17px;
-	background: url('images/icon-menu.png');
-}
-.action-btn {
-	width: 60px;
-	height: 60px;
-	background: url('images/action-btn.png');
-}
+

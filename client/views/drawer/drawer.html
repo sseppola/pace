@@ -1,19 +1,32 @@
-<template name="projectsDrawer">
+<template name="drawer">
+	
 	<div id="projectsDrawer">
 		<div class="exclBox">
 			<div class="tag clickable">^</div>
 		</div>
 		
-		<div class="drawer">
-			<div id="sideBar">
-				<!-- Coming soon -->
+		<div id="drawerMenu">
+			<div class="drawerMenuOption">
+				<button type="button" id="newProjectBtn" class="btn">+</button>
 			</div>
-			
-			{{> projectList }}
-			
-			<div id="moreProjectsBtn">
-				<!-- Coming soon -->
+			<div class="drawerMenuOption">
+				<button type="button" class="btn more-btn"></button>
 			</div>
 		</div>
+
+		<div id="drawerLeftBtn" class="drawerNav">
+			<button type="button" class="btn left-arrow" id="scrollLeftBtn"></button>
+		</div>
+		<div id="drawerRightBtn" class="drawerNav">
+			<button type="button" class="btn right-arrow" id="scrollRightBtn"></button>
+		</div>
+
+		<div id="projectList">
+			{{#each projects}}
+				{{> projectTemplate }}
+			{{/each}}
+		</div>
+
+
 	</div>
 </template>
