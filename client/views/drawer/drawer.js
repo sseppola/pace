@@ -1,17 +1,10 @@
 var projectPageDep = new Deps.Dependency;
 
+
 Template.drawer.events({
-	'click .tag': function () {
-		var $d = $('.drawer');
-		if ($d.hasClass('open')) {
-			Session.set('drawerState', 'closed');
-			$d.removeClass('open').addClass('closed');
-			$('#header').removeClass('hide');
-		} else {
-			Session.set('drawerState', 'open');
-			$d.removeClass('closed').addClass('open');
-			$('#header').addClass('hide');
-		}
+	'click .tag': function (e) {
+		var state = Session.get('isDrawerOpen');
+		Session.set('isDrawerOpen', !state);
 	},
 	'click #drawerLeftBtn': function () {
 		console.log("click L");
@@ -40,6 +33,16 @@ Template.drawer.events({
 });
 
 Template.drawer.helpers({
+	open: function () {
+		var state = Session.get('isDrawerOpen');
+
+		if (typeof state === 'undefined' ) {
+			state = false;
+			Session.set('isDrawerOpen', state);
+		}
+		return state;
+	},
+
 	projects: function () {
 		projectPageDep.depend();
 		var page = Session.get('project_page');

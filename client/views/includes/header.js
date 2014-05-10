@@ -1,4 +1,8 @@
 Template.header.helpers({
+	drawerOpen: function () {
+		return !Session.get('isDrawerOpen');
+	},
+
 	estimatedRun: function () {
 		var tasks = Tasks.find({accepted_date: PaceHelper.todayString()}).fetch();
 		var time = 0;

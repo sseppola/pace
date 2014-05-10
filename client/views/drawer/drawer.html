@@ -1,6 +1,6 @@
 <template name="drawer">
 	
-	<div id="projectsDrawer" class="{{ edgeCase }}">
+	<div id="projectsDrawer" class="{{#if open}}open{{else}}closed{{/if}} {{ edgeCase }}">
 		<div class="exclBox">
 			<div class="tag clickable">^</div>
 		</div>

@@ -28,9 +28,22 @@ $project-max-width: 650px;
 	text-align: left;
 	font-size: 13px;
 
+	// Transtition settings
+	@include transition-property(transform);
+	@include transition-duration($app-transition-time);
+	@include transition-timing-function(ease-in-out);
+
+	// Transform settings
+	@include transform-origin(left top);
+	
+	&.open {
+		@include transform(translateY($drawer-height));
+	}
+	
+
 	.tag {
 		display: inline-block;
-		position: relative;
+		position: absolute;
 		top: $neg-tag-height;
 		background: $drawer-background-color;
 		height: $tag-height;
@@ -49,6 +62,18 @@ $project-max-width: 650px;
 		#drawerRightBtn {
 			display: none;
 		}
+	}
+	&.open {
+		// height: $drawer-height;
+		// #drawerMenu, #drawerLeftBtnContainer, #drawerRightBtnContainer, #projectList {
+		// 	display: block;
+		// }
+	}
+	&.closed {
+		// height: 0;
+		// #drawerMenu, #drawerLeftBtnContainer, #drawerRightBtnContainer, #projectList {
+		// 	display: none;
+		// }
 	}
 }
 

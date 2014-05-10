@@ -1,6 +1,6 @@
 <template name="header">
 
-	<header id="header">
+	<header id="header" class="{{#if drawerOpen}}hide{{/if}}">
 		<div class="leftContainer">
 			<button type="button" id="menuBtn" class="btn menu-btn bt-menu-trigger"></button>
 			<button type="button" id="newTaskBtn" class="btn">+ New task</button>
@@ -12,11 +12,10 @@
 			<progress value='{{ progress }}' max='1' min='0'></progress>
 		</div>
 			
-			<div class="rightContainer">
-				{{> loginButtons}}
-			</div>
+		<div class="rightContainer">
+			{{> loginButtons}}
+		</div>
 
-		<!-- </div> -->
 	</header>
 
 </template>
