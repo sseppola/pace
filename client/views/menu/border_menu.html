@@ -1,0 +1,13 @@
+<template name="borderMenu">
+	<nav id="bt-menu" class="bt-menu bt-menu-{{#if open }}open{{ else }}close{{/if}}">
+	    <ul>
+	        <li><a href="#"><img src="images/icon_menu_exit.png"></a></li>
+	        <li><a href="#"><img src="images/icon_text.png"></a></li>
+	        <li><a href="#"><img src="images/icon_pie.png"></a></li>
+	    </ul>
+	    <div class="bt-content" id="bt-content">
+	    	{{> yield region='menuContent'}}
+
+	    </div>
+	</nav>
+</template>

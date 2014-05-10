@@ -10,7 +10,8 @@ Template.borderMenu.helpers({
 })
 
 Template.borderMenu.events({
-	'click .bt-overlay': function (e) {
+	'click .bt-content': function (e) {
+		console.log("overlay click");
 		Session.set('borderMenuOpen', false);
 	}
 });

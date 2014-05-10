@@ -1,6 +1,9 @@
 
 
 Template.taskList.helpers({
+	drawerOpen: function () {
+		return !Session.get('isDrawerOpen');
+	},
 	tasks: function () {
 		var startOfDay = new Date().setHours(0,0,0,0);
 		var endOfDay = new Date().setHours(23,59,59,999);

@@ -63,6 +63,17 @@ $secondary-vertical-padding: 34px;
 		}
 	}
 
+	@include transition-property(transform);
+    @include transition-duration(0.2s);
+    @include transition-timing-function(ease-in-out);
+
+
+    @include transform-origin(top left);
+
+	&.lifted {
+		@include transform(translateY(-$header-height));
+	}
+
 	text-align: left;
 	overflow-x: hidden;
 	.emptyTask {

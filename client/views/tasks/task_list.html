@@ -1,5 +1,5 @@
 <template name="taskList">
-	<div id="taskList">
+	<div id="taskList" class="{{#if drawerOpen}}lifted{{/if}}">
 		<!-- This can be improved by creating a custom handlebars block helper  -->
 		<div data-priority="1" class="task priority-1 completed-{{tasks.p1.completed}} taskDrop">
 			{{#if tasks.p1}}
