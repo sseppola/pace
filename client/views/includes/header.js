@@ -32,7 +32,10 @@ Template.header.helpers({
 });
 
 Template.header.events({
-	'click .bt-menu-trigger': PaceHelper.openBorderMenu,
+	'click .bt-menu-trigger': function (e) {
+		var state = Session.get('borderMenuOpen');
+		Session.set('borderMenuOpen', !state);
+	},
 	'click #newTaskBtn': function () {
 		console.log("Creating new task");
 	}
