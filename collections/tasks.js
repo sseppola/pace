@@ -2,6 +2,7 @@ Tasks = new Meteor.Collection('tasks');
 
 Tasks.allow({
 	insert: memberOfTaskProject,
+	remove: memberOfTaskProject,
 	update: memberOfTaskProject
 });
 
@@ -21,6 +22,19 @@ Meteor.methods({
 		});
 
 		var id = Tasks.insert(newTask);
+	},
+	deleteTask: function (task) {
+		console.log(task);
+		
+		if (!task._id)
+			throw new Meteor.Error(422, "The task needs an id");
+		
+		var dbtask = Tasks.findOne({_id: task._id});
+		
+		if (!dbtask)
+			throw new Meteor.Error(422, "No task by that Id");
+
+		Tasks.remove(task._id);
 	},
 	updateCompletion: function (id, state) {
 		Tasks.update(id, {

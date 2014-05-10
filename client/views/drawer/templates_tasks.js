@@ -7,8 +7,16 @@ Template.projectTaskTemplate.events({
 		console.log(e);
 		console.log("task id: " + this._id);
 		Session.set('draggedTask', this._id);
+	},
+	'click .deleteTaskBtn': function (e) {
+		Meteor.call('deleteTask', this, function (error, id) {
+			// if (error) {
+			// 	console.error(error.reason);
+			// 	console.error("error deleting task from templates_task.js");
+			// }
+		});
 	}
-});
+ });
 
 Template.projectTaskTemplate.helpers({
 	'taskClasses': function () {
