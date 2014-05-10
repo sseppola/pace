@@ -1,27 +1,21 @@
 <template name="projectTaskTemplate">
 	<div class="task {{taskClasses}}">
+		<button class="clickable deleteTaskBtn btn">X</button>
 		<p>{{title}}</p>
 	</div>
 </template>
 
 
 <template name="newProjectTaskTemplate">
-	<div class="task">
-		{{#if creatingNewTask}}
-			<form>
-				<div id="closeNewTask" class="clickable">X</div>
-				<div>
-					<input type="text" name="title" placeholder="Task name" />
-				</div>
-				<div>
-					<label for="estimate">Time estimate:</label>
-					<div class="slidah"></div>
-					<span>{{ timeEstimate }}</span>
-				</div>
-				<input type="submit" value="Create" />
-			</form>
-		{{else}}
-			<div class="newTaskTrigger clickable"><p>+ New Task</p></div>
-		{{/if}}
-	</div>
+	<form>
+		<button class="clickable deleteTaskBtn btn">X</button>
+		<div>
+			<input type="text" class="nameInput" name="title" placeholder="Task name" />
+		</div>
+		<div>
+			<div class="slider"></div>   <!-- This is made when drawn -->
+			<span>{{ timeEstimate }}</span>
+		</div>
+		<button type="submit" class="btn createBtn">Create</button>
+	</form>
 </template>

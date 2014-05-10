@@ -1,21 +1,20 @@
-<!-- <template name="projectList">
-		{{#each projects}}
-			{{> projectTemplate }}
-		{{/each}}
-</template> -->
-
 
 <template name="projectTemplate">
 	<div class="project {{ hideR }} {{ hideL }}">
 		<h2 class="title">{{name}}</h2>
 		
 		<div class="projectTaskList">
-			{{> newProjectTaskTemplate }}
+			<div class="task">
+			{{#if creatingNewTask}}
+				{{> newProjectTaskTemplate }}
+			{{else}}
+				<div class="newTaskTrigger clickable"><p>+ New Task</p></div>
+			{{/if}}
+			</div>
 			
 			{{#each tasks}}
 				{{> projectTaskTemplate }}
 			{{/each}}
-
 		</div>
 	</div>
 </template>

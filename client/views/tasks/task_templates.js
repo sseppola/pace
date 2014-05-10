@@ -1,3 +1,7 @@
+// --------------------------------------
+// 		projectTaskTemplate template
+// --------------------------------------
+
 Template.singleTask.helpers({
 	projectName: function () {
 		var project = Projects.findOne({_id: this.projectId});
@@ -12,17 +16,13 @@ Template.singleTask.helpers({
 });
 
 Template.singleTask.events({
-	'click input[type=checkbox]': function (e) {
+	'click .checkboxContainer': function (e) {
 		e.preventDefault();
-
-		var newState = false;
-		if ($(e.target).is(':checked'))
-			newState = true;
+		var newState = !this.completed;
 		
 		Meteor.call('updateCompletion', this._id, newState, function (error) {
 			// check for ownership
-			if (error)
-				alert(error.reason);
+			if (error) alert(error.reason);
 		});
 	},
 	'click .checkbox': function (e) {

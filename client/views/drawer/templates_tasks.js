@@ -14,11 +14,9 @@ Template.projectTaskTemplate.helpers({
 	'taskClasses': function () {
 		var priority = "";
 
-		if (this.priority)
-			priority = "p" + this.priority;
+		if (new Date().setHours(0,0,0,0) < this.accepted_time) priority += 'accceptedToday ';
 
-		if (this.priority == 3)
-			console.log(this);
+		if (this.priority) priority += "p" + this.priority + ' ';
 
 		return priority;
 	}
@@ -31,9 +29,6 @@ Template.projectTaskTemplate.helpers({
 var timeEstimateDep = new Deps.Dependency;
 
 Template.newProjectTaskTemplate.helpers({
-	creatingNewTask: function () {
-		return Session.get('newTask-' + this._id); // returns the project id
-	},
 	timeEstimate: function () {
 		timeEstimateDep.depend();
 		var v = Session.get('estimate-' + this._id);
@@ -42,10 +37,7 @@ Template.newProjectTaskTemplate.helpers({
 });
 
 Template.newProjectTaskTemplate.events({
-	'click .newTaskTrigger': function () {
-		Session.set('newTask-' + this._id, true);
-	},
-	'click #closeNewTask': function () {
+	'click .deleteTaskBtn': function () {
 		Session.set('newTask-' + this._id, false);
 	},
 
@@ -76,17 +68,18 @@ Template.newProjectTaskTemplate.rendered = function () {
 		Session.set('estimate-' + $project._id, value);
 	}
 	
-	var $s = $('.slidah');
-	$s.slider();
-	$s.slider('option', {min: 0, max: 180, step: 5});
-	$s.slider("value", value);
-	
+	var $s = $('.slider');
 	$s.slider({
-		change: function(e, ui) {
+		min: 0,
+		max: 180,
+		step: 5,
+		value: value,
+		slide: function (e, ui) {
 			var val = $s.slider('value');
 			Session.set('estimate-' + $project._id, val);
-			timeEstimateDep.changed();
+			timeEstimateDep.changed();	
 		}
-	})
+	});
+
 }
 	

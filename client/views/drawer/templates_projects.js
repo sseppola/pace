@@ -16,8 +16,19 @@
 Template.projectTemplate.helpers({
 	tasks: function () {
 		return Tasks.find({projectId: this._id, completed: false});
+	},
+	creatingNewTask: function () {
+		return Session.get('newTask-' + this._id); // returns the project id
 	}
 });
+
+Template.projectTemplate.events({
+	'click .newTaskTrigger': function () {
+		console.log("New task trigger");
+		console.log(this);
+		Session.set('newTask-' + this._id, true);
+	}
+})
 
 Template.projectTemplate.rendered = function () {
 	console.log($('#projectsDrawer .task').length);
