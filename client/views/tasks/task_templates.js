@@ -16,28 +16,13 @@ Template.singleTask.helpers({
 });
 
 Template.singleTask.events({
-	'click .checkboxContainer': function (e) {
+	'click .checkbox': function (e) {
 		e.preventDefault();
 		var newState = !this.completed;
 		
 		Meteor.call('updateCompletion', this._id, newState, function (error) {
 			// check for ownership
 			if (error) alert(error.reason);
-		});
-	},
-	'click .checkbox': function (e) {
-		e.preventDefault();
-
-		var $t = $(e.target).parents('.task');
-		var newState = false;
-
-		if ($t.hasClass('completed-false'))
-			newState = true;
-		
-		Meteor.call('updateCompletion', this._id, newState, function (error) {
-			// check for ownership
-			if (error)
-				alert(error.reason);
 		});
 	}
 });
